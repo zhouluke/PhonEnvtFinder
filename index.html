@@ -1,0 +1,2537 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Phonological Environment Finder</title>
+	<link href='https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed' rel='stylesheet' type='text/css'/>
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="wide-col col">
+	<h1>Phonological Environment Finder</h1>
+
+	<!--<p>Copy and paste your .txt file output from AntConc into the box below, and hit "Prune!"</p>-->
+
+	<form>
+		<p>Phone to find: <input type="text" name="phone" /></p>
+		<p>Ignore phone length?
+			<input type="radio" name="ignore-len" value="yes" /> Yes
+			<input type="radio" name="ignore-len" value="no" checked /> No
+		</p> 
+		<div class="half-col" id="input-div">
+			<textarea name="my-input">
+[mʌʃˈke:go]
+[mʌʃˈke:gok ̚ niʔamijit nawa:w]
+[ni:nʌ]
+[nɪˈmɪnɪxʷɑ:n]
+[bɹɛndʌ ˈni:nʌ]
+[ki:nʌ]
+[kɪˈmɪnɪxʷa:n]
+[kɪˈmɪnɪxʷeja:w]
+[ˈmɪnɪxʷeja:n]
+[ˈke:kɔ:n oˈma]
+[ˈke:ɣɔ:n]
+[ke:ɣɔ:n anəwma]
+[ke:ɣɔ:n anˈɪɣi]
+[awɛ:na]
+[awɛ:ˈna? aˈwa]
+[awɛ:na? ana]
+[mɑ:t͡s]
+[mɑʔ]
+[mɑt͡snɪmɪnɛ:t̪ ɪ̞̞: n]
+[nɪmɪnɛnt̪ɛ:n]
+[wɑˈpɪ̞̞]
+*[wɑˈpi]
+[nɪwɑpɪθt̪ɛn]
+[nɪwɑpᵊmaw]
+[nɪwɑpᵊmawak]
+[ˈkʌxʌnaw]
+[ˈkʌxʌnan]
+[ˈmɪʃtʃɛnt̪]
+[mɪst̪ʌhi]
+[ɑt̪:ɪm]
+[mɪst̪ahi:t̪ɪm]
+[ˈpe:jʌk]
+[eˈp:e:jakowt]
+[ni:ɕoʷʔ]
+[ni:ɕowtʃɪk]
+[nɪs̪t̪owʔ]
+[ˈnɛjow]
+[niˈja:nɪn]
+[kʊhtɔ:sɪk] or [kəhtɔ:sɪk]
+[ˈt̪ɛpɪkoʷx] or [ˈtɛpikoʷkʰ]
+[ˈe:nanejow]
+[ʔeɦeʔ]
+[ke:ɣat̪mɪt̪a:t̪ɪθ]
+[mɪt̪a:t̪ɪθ]
+[mɪsa:kʰ]
+[kɪnanaʃkumɪtin]
+[ekusɪn]
+[nɪ’ma:ma]
+[kɪ’ma:ma]
+[nɪbaba]
+[kɪbaba]
+[nekusɪs]
+[netanɪs]
+[awasɪsak]
+[nɪt͡ʃɪwasɪmɪsak]
+[awasɪs]
+[nemɪs]
+[nɪst3s]
+[nɪsim]
+[ɛskweɪʎow]
+[nɪmʌʃum]
+[nɪnʌkum]
+[kɔkum]
+[nʌkomɪs]
+[nɪt͡ʃhaʊs]
+[skweɪʎsɪs]
+[sk˺weo]
+[ˈniːstao]
+[nɪˈʧəwɑːm]
+[nɪʔʧ̥əˈwɑːgn̩]
+[niʧəmʊs]
+[nɪwɑːɣomaːɣaːn]
+[naːˈpeo]
+[naːp˺ɛːsɪs]
+[mɪxɔːk]
+[waːpɪˈxak˺]
+[usaoʷ]
+[mɪˈstɪkʰ]
+[ʌˈskih]
+[waːb̥ɪɣeoʷ]
+[waːbəsk]
+[ˈmʌskwa]
+[ustɛˈɣɑːn]
+[nukumɪs]
+
+[nɪpa]
+[nɪpaʊ]
+[nɪnɪpa:n]
+[nɪpɛ]
+[ɛɣinɪpɛt]
+[stɪɣɑn]
+[ʊstɪɣɑn]
+[skʊləwɪ{k/χ}]
+[ɛɣiskʊləwɪt͡ʃɪk]
+[kɪskɪnːɑmʌhaʊ]
+[daskʊlʌwɪn]
+[nɛwiskʊlʌwɪn]
+[nɛwiɣɪwɑn]
+[nɛwɪnimɛn]
+[nɛwinimɛnan]
+[ɛnimɪt]
+[nimɔ]
+[sʊχinimɪt]
+[mʌsnʌjgæθtɪx]
+[mʌsnʌjxɛj{oʊ/ɔ}]
+[niwɪɣiwa:n]
+[nɪɣiwa:n]
+[nigex]
+[waska:jgɪn]
+[niɣɪx]
+[nɪwigʌwam]
+[awigʌwama]
+[kiwɛnawi]
+[kiwɪʔn]
+[neɑw ot̪emʌk newɑpe mɑwʌk]
+[kʌχʌna{n,w} nɪˈmɪnɪχʷejɑːn]
+[ekɪˈmɪnɪχʷejɑːk]
+[kɪnɑːwbɛːkʰ]
+[ˈɑpɪsiso]
+[ɑpɪtito]
+[ɛskwejo]
+[nɑpejo]
+[skwesis]
+[-sis]
+[ɑpɪsɑs]
+[iːnɪnu]
+[iːnɪnuwa(k)]
+[eki]
+[nemama]
+[kemama]
+[nepapa]
+[noχʌm], [nokʌm]
+[nokʌmis]
+[koχʌm]
+[kuku]
+[nɪkusɪs]
+[egoɑnɑ nɪkusɪs]
+[nɪt̪anɪs]
+[nɪmɪs]
+[nɪsiːm]
+[nɪstɛs]
+[ˈnɪsiːm]
+[osiːma]
+[nɪsiːmʌk]
+[ɑstʌm]
+[bɛt̪a]
+[bɛt̪anɪma]
+[anɪma]
+[oma]
+[bɛt̪aoma]
+[mʌsɪnajke]
+[mʌsɪnajkɑ{t,θ}ik]
+[mʌsɪnajkʌn]
+[nɪmʌsɪnajkɑn]
+[gʌnusejo]
+[gʌnusejwɑːk]
+[bɪnezis]
+[nɪska]
+[nɪskʌk]
+[siːsip]
+[sisipa]
+[ɔskɑjakɛn]
+[nikɛk]
+[wɔtinigɑn]
+[kɛpom{ɪ,ɛ}θ{t,t̪}{ɪj,ɛ}ɪn]
+[pomɛθ'tɛwak]
+['pom{ɛ,ɪ}θt̪ɛo]
+[{'ʔ}ɛpomɛθ{t̪,t}ɛ{t̪,t̚}]
+[{ɛːta,ʔɛ't:a} mɛtwɛt̚]
+[{aːs̪kaw,ʔas'kaw} ɛ{'}mɛtwɛ{t̚,t̪}]
+[mɛtwɛ{ʔ}]
+[{m}ɛtwɛo]
+[{ˌ}pom{ɪ,ɛ}θ{'}t̪{ɛ}awak]
+[ʔa'wɛ:na 'ki:na]
+[ʔa'wɛ:na 'ʔu:ki]
+[ʔa'wɛ:na ʔa'nɛ:ki]
+[ʔa'wɛ:na a'na]
+[ʔa'wɛ:na a:wa]
+[ʔ{ɛ̞,ɪ}kɪs{'}kɛ{ː}namat̚]
+[kɪ:kɪs'kɛnama:w]
+[kɪ:kɪs'kɛnama:wak]
+['pomɪθtɛ]
+['nɪpomɪθt̪ɛn]
+['ʔɛpomɪθt̪ɛax]
+['pomɪθt̪ɛan]
+[mɪ'na:sɪn]
+[mɪ'nɪsɪso]
+[mɪnɪ'ɣɪsi{k/g̥}ow]
+[ʔɛ'mɛtwɛt̚]
+[kɪs'kɛnt:a]
+[nɪkɪskɛntɛn]
+[kɪ:kɪs'kɛnama:w ʔa'wa]
+[kɪ:kɪs'kɛnama:w ʔa'na]
+[kɪ:kɪs'kɛnama:wak ʔa'nɛ:ki]
+[nɪ:kɪs'kɛnama:w 'kɛma:ma]
+[kɪ:kɪs'kɛnama:w ʔa'wa]
+[nɪ mɑ:mɑ]
+[nɪ baba]
+[inʌnuʷ]
+[inʌnuwʌkʰ]
+[inɪnanɪmowʌn]
+[pʌspapʌn]
+[amʌwʌkʰ]
+[inɪnanʌmwɔkʰ]
+[nejhiɐwkʰ]
+[inɪnamowʌkʰ]
+[inɪnanɪmowʌn]
+[amo]
+[amɪ]
+[kɪpʌha]
+[nɪwapɪθtɛna]
+[nɪwɑpʌmawak]
+nɪgiwapʌmaʌk
+[nɪgiwapɪmaw]
+[nɪwɑpʌmaw]
+[mɪhu]
+[mɪhog]
+[wabiɦɔk]
+[wabusk]
+[wapʌn]
+[uːsaʊ]
+[ənɪgi]
+[ənɪgi bogo]
+[dɛbɛkʰoʔ]
+[nɪʃtoʊ]
+[dɛbɛkʰoʔ maj əpɛlɛ] or [dɛbɛkʰoʔ mej apanʊ]
+[dɛbɛkʰoʔ musnaj gɪnɑːt nejgiminoʊ]
+[dɛbɛkʰoʔ nigiminoʊ]
+[wuʒahʌs]
+[o kut]
+[gɪk gut]
+[niʒɑhʌs]
+[nɪstɛs]
+[ni hʷa gu ma gan]
+[ɒmusnajgʌn]
+[musnajgʌn ɒma] 
+[musnajgʌn nəː] 
+[mʌsˈnajgan]
+[mʌsˈnajgeː]
+[mʌsˈnajgaθt̪ɪk]
+[dɛs̪tapon]
+[apɛ]
+[mit͡ʃaɕonˈaːθt̪ɪk]
+[mit͡ʃaɕo]
+[mʌʃˈkɛːgok̚]
+[amoʔ]
+[ɪnɛno]
+[ɪnɛnowak]
+[ɪnɛˈnan amoʔ]
+[ɪnɛˈnan amoːn]
+[mɪɕˈt̪͡ɕet̪̚]
+[ˈmɪɕtahi]
+[maxɛ]
+[maxɛt̪un]
+[kɪt̪iːxan]
+[ˈbɪpːon]
+*p#
+[aˈjamɛhat
+[aˈjamɛçiː]
+[ˈpɛʃo]
+[ˈtaːxaj]
+[d̪͡ʝʊs̪d̪͡ʝi]
+[dapˈwɛ na]
+ni:nʌ
+awɛ:na awa
+ki:nʌ
+pe:jʌk
+*ni:næ
+*ni:na
+mɪsa:g
+gɪst͡ʃɪ
+gɪst͡ʃɪ waskajagan
+mɪsɪ'gɪ:t̪ɔ:
+wɪnɪnu:
+*wɪnɪno:
+gɪ'nɑ:zgɪzu
+*gɪ'næ:zgɪzu
+*gɪ'nɒ:zgɪzu
+gɪ'nɑ:zgɪzu anajskɛjl
+gɪ'nɑ:zgɪzu ananapɛo
+napɛjo
+ana na'pɛjo
+maskwa
+mɪst̪axi
+dabwɛ mɪst̪axi ɛ mitsut
+dabwɛ
+mɪst̪axi mit̪su
+mi{ʃ,θ}ju
+gimisin
+nɪmisin
+mʌsko'waw
+muwaw
+muwat
+nɪmɪt͡su'sun
+nɪmi:'s{i,i:}n
+at̪ɪm
+mɪst̪axim at̪ɪm
+bɛ: mɪt͡susu
+*'bɛ: mɪt͡susun
+bɛ: mɪt͡susuk
+bɛ:
+mʌske:{g,ɣ}o
+mʌske:{g,ɣ}ok
+i:n.in:u
+i:n.in:wak
+i:n:ɪ'na
+am{e,ɛ}xi:
+amu:
+a:mu:
+in:in:ɪn anɪnmw{u,o}
+gɪsɛ mantu
+mant{u,ɯ}
+nɪ'wa bɪ'ma:wakʰ
+nɪ'wa 'bɪ'ma:w
+[waskajɛgan]
+[nigəna:n]
+[nigɪk̚]
+[wi:gəwamə]
+[ˈmidʒɛsɛnaθtɪk]
+[dʒʌskɛo]
+[aˈski]
+[ˈʃuniow]/[ˈsuniow]
+[bijobɪskʰow]
+[bijobɪskʰ]
+[wɪtʃa:gʌs]
+[bɪmbʌθda:]
+[bɪmbʌθdeo]
+[ibɪmbʌθda:t]
+[bɪmbʌθda:tʃɪk]
+[tabɪmbʌθdeo]
+[wabʌhɛo bɪmbʌθdeo]
+[tabɪmbʌθdeoakʰ]
+[bɪmʌθde:]
+[kajas]
+[tanəgowtəh]
+[da]
+[ɛgi]
+[kʌse:hawʌk]
+[nɪwakuma:n]
+[pisɪm]
+[t̪ɪpɪskakpisɪm]
+[kɪmowan]
+[mɪnekisəkaw]
+[nut̪ɪn]
+[kɪsətejɔ]
+[wanɔwijɔ]
+[panɪkɔhej]
+[nɪskʌ]
+[t̪ehemɛna]
+[st̪ɪkɔʷnɪmə]
+[uʃsaw]
+[mɪxɔɦ]
+[wɑpɑsk]
+[wɑpɑn]
+[wɑpɑxaɦ]
+[wɑpɑheɔ]
+[kʌkət͡ʃeɔ]
+[ʔɛʃkuteɔ]
+[d͡ʒiman]
+[mɪstɪk]
+[ʃtɪɣɔːn]
+[çunjaːw]
+[uʃaːw] 
+[səbʷɛ:pano]
+[səbʷɛ:pano taːban]
+[nɪtɪːntɪn]
+[nɪʃkɪːntɪn]
+[kɪʃtɪːntɪn] 
+[kɪʃtɪːntɪnɔax]
+[niwa:bɛθtɛn]
+[kiwa:bɛθtɛn]
+[ɛwa:bɛθtax]
+[kiwaːbɛθtɛax]
+[ɛwa:bɛθtax]
+[kiwaːbɛθtɛax]
+[tɪwa:bɛθtɛdan]
+[bʷɛɣɛθto] 
+[tɪbʷɛɣɛto]
+[bʷɛɣɛθto]
+[eɣi bʷɛɣɛto] 
+[kagi bʷɛɣɛto] 
+[nɛbɛθtɪn]
+[eko ma eɣidʷɛt]
+[maʃkɔt ɛɣənaːʃkot]
+[maʃkɔt]
+[tanega:wtɛ]
+[mɪ{ɑ/ɔ}k]
+[ɕtiˈgɔ:n]
+[ɕtigɔ:n]
+[kaxənaw]
+[kaxəna:n]
+[ˈnɪʃtow]
+*[neˈwaguma:gan]
+[newaɣumɑ:ɣan]
+[mɪstahi]
+[mɪstahi neɣimitsut]
+[mɪsʧ{ɪ:/ɛ:}tʰ]
+[mɪsa:k]
+[nɪʔ]
+[kɪʔ]
+[aˈwɛna ˈkina]
+[ˈnɪkalas ni:nʌ]
+[ʔɪmɪxop:anit kɪpaˈɣ{o:/ɔ:}n saɣajʔ]
+[wa:pɪxak kɪpa{o:/ɔ:}n saɣajʔ]
+[wɑpixan kɪta:s]
+[wɑpɪxak kɪta:sɪɣana]
+[wɑp:ɑn]
+[wɑp:ɑnʊk]
+[wɑp:ɪxɪ]
+[wɑp:ɪxɪ kɑwɑpmɪtɪn]
+[ˈwɑp:ɪxɪ: k{ə/a}wɑp̚(ɪ)mɪt̚(ɪ)na:n]
+[k{a/ʌ}]
+[mə.ˈʃke:ɣo]
+[mə.ˈʃke:go]
+[mə.ˈʃke:gowak]
+['ʔat:ɪm]
+['ʔ{ɔ,u}t:ɛ:mak]
+['k{i',ɪ̞}t:ɛm]
+['ʔawɛna 'ʔɔt:ɛ:m]
+['ʔɛ{k,g}i nɪpahat ʔ{a,ʌ}t:ɪm]
+['ʔɛ{k,g}i nɪpahat 'ʔawɛna 'ʔɔt:ɛ:mak]
+['ʔɛ{k,g}i nɪpa:t]
+['{a,ʌ}n{aɪ,aj}t:ɪm 'ʔɛ{k,g}i nɪpahat]
+[nɪ p:oʔ]
+['ʔat:ɪm 'ʔɛ{k,g}i nɪpahat]
+['ʔɛ{k,g}inɪpahat 'kɪt:ɛ:mak]
+['kɔ:ɣɔm]
+['nɔ:ɣɔm]
+[mas'na:jɣʌna]
+[mas'na:jɣʌn]
+[mas'na:jɣɛ]
+[mas'kwa]
+[mas'kwakʰ]
+['mɪɕtɪkʰ]
+['mɪɕtɪkwa]
+[ku'nɪɕsɛo]
+[ku'nɪɕsɛ:wak]
+['mi:nɪɕsa]
+['mi:nɪɕ]
+['ski:zɪk]
+['ski:zɪka]
+[kɪ'kunɪɕsɛm]
+[kɪ'na:{b,p}ɛm]
+[kɪ'kunɪɕsɛ:mak]
+[kɪ'na:pɛ:mak]
+[wɑ:'pɔs]
+[wɑ:'pɔsak]
+[miɕ't͡ʃʲɛtwa 'wa:pɔsak]
+[miɕ't͡ʃʲɛtwa 'wa:pɔsak 'ʔɛginɪpahatʰ]
+[ʔɔt:ɛ:m]
+['ʔawɛna ʔɔ:'t:ɛ:mak]
+[stɪ'gɑn]
+['mɪstahi]
+[mɪ'sa:k]
+[mɪsɪgɪt:o ana'na:pejo]
+[a'na]
+['awa]
+[nɪwɑp(ɪ)ma:wʌkʰ]
+[tanɪwa]
+[mɑts]
+[awɛna ki:nʌ]
+[mɑt˺ nɪkɪskɛnɪmaw]
+[wa:p:ʌn]
+[asai]
+[asai wa:p:ʌn]
+[tɪpɪ'skaw pi:sɪm]
+[muna ke:kɑn]
+[muna]
+['mɑt:ejo]
+[bɪmbʌθta]
+[bʌb:a:si]
+['kɪnɪpi]
+[maθt:ɪ]
+[maθt:ɪ kɪnɪpi]
+[ʤɪʃʤi]
+[sɪt]
+[kɪsɪt]
+[nɪsɪt]
+[kɪsɪt:a]
+[mɪnɪɣwɛ]
+[mɪnɪhwɑ:gʌn]
+[ke:kɑn nɪmɪnɪhwɑ:n]
+[onagan]
+[dɛmɪɣwɑ:n]
+[muxɪman]
+[ʤistaskɑ:n]
+[wɑp:ʊs]
+[kuɣʊs]
+[ɪkɪnawbek˺okʊt˺]
+[mus]
+[at:ɪx]
+[kunɪsejo]
+[mɪʧɪso]
+[pɛmiʧɪso]
+[ast:am]
+[pet:ape]
+[pegjuge]
+['wawʌ]
+[sisip]
+[apoɣɪsis]
+[sis]
+[alokɪʤas]
+[minɪsa]
+[pejpal]
+[pejpalǝwʌt]
+[ki:wʌt]
+[mʌsnajɣan]
+[mʌsnajɣatɪk]
+[ne bɪmbʌʰtən] or [ne bɪmbʌʰtejan]
+[kɪp̚ɪm]
+[ɛ bɪnbʌʰθtaw] or [ɛ bɪnbʌʰstaw]
+[p̚ɪmbʌstejɪnnaw]
+[ej bɪnbʌstaʒɪk]
+[kɪ p̚ɪmbʌʰtaw]
+[ɛ bɪnbʌstajak]
+[ɛ pumaksuak]
+[nɛ bɪmatt͡sʊn]
+[ɛ bɪmatt͡su]
+[wi bɪmatt͡su]
+[niwi bɪmattən]
+[bɪmbʌttaw kæθɚɪn]
+[bɪmbʌttaw]
+[wiːpats]
+[mɛhaʊ kɪpɪgansagaɪ]
+[mehoʊ ɪmɪhɔk bʊgansagaɪ]
+[kɪsmusnajgʌn oʊ manah]
+[oʊ manah kɪsmusnajgʌn]
+[kɪs mənajgʌn oʊ manah]
+[oʊ majta kɪs munajgʌn]
+[oʊmaʰsa]
+[kɪs mənajnu oʊmanahʒi]
+[kɪ bɪmbʌstana]
+[kɪ bɪmbʌθtan ʒi]
+[ɛhɛ]
+[tʃɪgɑmə]
+[na]
+[kɪ gi bɪmbʌstana]
+[ke gi bɪmbʌθstawnɑ kæθɚɪn]
+[ke gi bɪmbʌθstawnɑ]
+[kigi giwɛ̝jonaw gɑːt̪ɛm] or [kigi giwɛ̝jonaw kʰɑːt̪ɛm]
+[nɛtɛm]
+[utɛm]
+[b̚etaguzoʊ]
+[b̚etaguzoʊ kʰɛːdɛm] *(imperfect transcription)
+[mɑt pɛdaguzoʊ ɛgiwanɪzɪt]
+[ɛwanɪpʌn]
+[nɛ tutem]
+[nɛ tutemək]
+[pɛ:su]
+[bɪmbʌθta:kʰ]
+[nuʧɪʧɪm]
+[nusɪsɪim]
+[apɪʧi:ʧu:]
+[apɪsi:su:]
+[mɪsɪgɪt:uˀ]
+[k̚ɪnɑ:sgɪsu]
+[ap:ɪsæ:sɪtʰ]
+[ap:ɪˈsis]
+[ap:ɪˈsis ˈpɔɣɔ]
+[wina pɔɣɔ t̚ɑt̚oθt̚ejo]
+[p̚ɪk̞̚oˀ]
+[p̚ɪk̞̚oˀ pɔɣɔ]
+[mɑ:tsnɪmɪˈnɪntɪn ɪtæ: k̚ɪmowɪn:utɛ̞]
+[ɪtæ: mi:tsut]
+[mi:sju:]
+[ɪp̞ ɪ:̞ ˀamihɪtʰ]
+[kimisi:na:]
+[ʧɪɣɛ:ma:]
+[mɑskowawna:]
+[mɑskwaˀ]
+[kɪmi:si:n]
+[kɪbɪmbʌθt̚a:n:a:]
+[kɪbɪmbʌθt̚e:jɪn:a:]
+[sjuθ.t̚a:.gʌn]
+[pɛt:a sjuθ.t̚a:.gʌn]
+[pɛt:a]
+[ɪp̞̚ɪ]̞
+[ɑwʌs]
+[ɑwʌste:]
+[ɑwʌstaɣusix]
+[astʌm]
+[astʌmut̚:a]
+[astʌmut̚:e:]
+[nit:ɛ̞:wa:θnaw]
+[sjuʧ̚i:s]
+[sjuθta:gʌn]
+[mɪˈnɔ]
+[mɪˈnɔ:sɪn]
+[mɪˈnɪsɪɔ]
+[nɪˈmɪn ˈebedʌθtejx uˈte:]
+[u:ˈtʌ]
+[u:de:nedabʌn]
+[kɪdabɪn]
+[ta:nte:]
+[aˈwajtʌ]
+[ta:nawa]
+[skəˈde:ɔ]
+[ta:ɣaj]
+[ˈtuskɪt taɣaj]
+[ˈte:nɪni]
+[ˈba:nəgəɣe]
+[kɪba:nəgəɣan]
+[nɪˈbe:bɪm]
+[kɪˈda:sa]
+[kɪˈda:s]
+[ˈmajɣʌn]
+[ˈegisapwɛθte:ɔ]
+[asajsapwɛθte:ɔ]
+[asajnɪp:ɔ]
+[asaj]
+[asajgɪmɪtsʊn]
+[mu:ow]
+[egimuwat]
+[maθta]
+[maθtama:]
+[ti:ɣe:ɔ]
+[ti:ɣɪt]
+[ma:]
+[kʌneduda]
+[kʌnema:mase:ɪn]
+[kɪdɪdawɪn]
+[ki:stamina]
+[nɪdawɛntɛn]
+[kɪsaθtaw]
+[ni:sta]
+[nɪsa:giɣɪtɪn]
+[kinawaw]
+[kinanan]
+[nahiwenʌ'nanimut]
+['inanun]
+[a'mo]
+[a:'mo]
+[ʔet:a:dʒimut]
+[e:wi mi:tʃok̚]
+['musun]
+[eɣi paɣamaha:t]
+[ʔesewep:anet]
+[ʔawena ʔana]
+[u:sa:w]
+[mat̪un]
+[ebɪmbʌθt̪a:t]
+[eɣi bɪmbʌθt̪a:t]
+[e:wi bɪmbʌθt̪a:t]
+[eɣi wabʌθt̪e:na:n]
+[pɪmpʌθt̪eɔ]
+[epɪmpʌθt̪at]
+[eɣipɪmpʌθt̪at͡ʃɪkʰ]
+[ʔɪta: pɪmpʌθt̪aw]
+[kajas kaɣi pɪmpʌθt̪a:t͡ʃɪkʰ]
+[kijas]
+[eɣi: pakəmənat]
+[mʌskɪsɪn]
+[mʌskɪsɪna]
+[kɪmʌskɪsɪna]
+[kɪma:tu]
+[wiwɛt]
+[ta:pwej a:nɔman]
+[sʌwe:θte:]
+[inana:mɔ:wun]
+[at͡ʃɪmʊ]
+[ʔɪtat͡ʃɪmʊt]
+[pʌɣɔn saɣaj]
+[awɛna ʔawaː]
+[awɛna ʔanaː]
+[ʔat̪ɪm]
+[ˈɛgusɪʔ]
+[miːnɪsaʔ]
+[baˈst̪ɪnəmaːgʌn]
+[maskɪsɪˈna]
+[ˈmaskɪsɪn]
+[pʌtʃʌska kɪpʌgonsaɣaj]
+[ˈskisəga]
+[maːt̪uː]
+[nɪʔmaːt̪uːn]
+[wiwaːtʰ]
+[tapʷej aːnomʌːn]
+[naheːn]
+[sʌpʷɛθdeː]
+[inɪnanəmowan]
+[aːmoː]
+[amo]
+[aʔtʃɛmo]
+[ətʃatʃɛmo]
+[hidʒegɪt]
+[nɪgusɪsa{k/kʰ/k ̚}]
+[mɪsɪ{ɣ/g}ɪt̪ːuak nɪgusɪa{k/kʰ/k ̚}]
+*[nɪɣusɪak]
+[nɪbaːba ʔawa]
+[ɛɣo nɪbaːba]
+[nɪbaːba ʔanaː]
+[ʔawɛna kɪbaːba/kɪmaːma]
+?[kɪbaːba ʔawɛna]
+??[nɪbaːba ɛɣo]
+[dʒɔɹdʒ saʔa kɪbaːba]
+[mɑtsut̪ːɪʔ ǁ dʒɔɹdʒ saʔa kɪbaːba]
+[muna ǁ nɪbaːba saʔa]
+[dʒɔɹdʒ ʔɪsnɪxaːs{ʊ/ɔ}ʔ nɪbaːba]
+[dʒɔɹdʒ nɪbaːba ʔɪsnɪxaːs{ʊ/ɔ}ʔ]
+[mɑts nɪbaːba dʒɔɹdʒ]
+[mɑts nɪbaːba nɪst̪ɛːs saʔa]
+[mɑtsut̪ɪʔ ǁ niːn{ʌ/ə} kɪbaːba (luːk)]
+[masnajɣaθtɪk]
+[masnajɣan]
+*[masnajxaθtɪk]
+[masnajɣe]
+[nɪˈmasnajɣan]
+[kɪˈmasnajɣan]
+[masnajɣeo]
+[kɪmasnajɣejan]
+[kinənaːn]
+[kinənaːw]
+[kinənaːw]
+[kinənaːwaːw]
+[masnajɣejaːx]
+[wiːnʌ]
+[wiːnʌ pʊɣʊ]
+*[bʊɣʊ]
+[kɪmasnajɣan]
+[kɪmasnajɣanaːw]
+[masnajɣewak]
+[masnajɣewak]
+[nɪɣimasnajɣan]
+[nɪɣimasnajɣejan]
+[ka{ɡ,ɣ}imasnajɣejan]
+[ka{ɡ,ɣ}imasnajɣejan mɪt̪ːʊneːɣ{i,ɪ}maːt̪ːun]
+[ka{ɡ,ɣ}imasnajɣejan mɪt̪ːʊneːnɪɣ{i,ɪ}maːt̪ːun]
+[mɪt̪ːʊneːŋɡɪmaːt̪ːun]
+[wapiχɪː t̪amasnajɣan]
+[t̪amasnajɣan saʔa]
+[mɑts t̪awanʊwiːn wapiχɪː]
+[wapiχɪː mɑts t̪awanʊwiːn]
+[mɑts wapiχɪː t̪awanʊwiːn]
+*[t̪awanʊwiːn wapiχɪː mɑts]
+[kɪɣimasnajɣeːn]
+[kɪɣisweːbaːn]
+[nɪwanɪɣɪskɪsɪn]
+[nɪwanɪɣɪskɪsɪn keːɣɔn eː ɡi t̪ut̪ːamaːn ʔut̪ːaɣʊsɪχ]
+[kɪɣimasnajɣeːn saʔa]
+[eːɣimasnajɣeːt̪]
+[ɡimasnajɣeːuʔ]
+[ɡimasnajɣeːwak]
+[kiɣimasnajɣeːaːχ]
+[kɪnawaːw tʊθt̪eːk]
+[kɪt̪ʊθt̪eːjaːχ]
+[ˈdɛbɛgox]
+[mɪnɪxˈwagən]
+*#x
+[ˈmɪnɪxʰewak]
+[mɪnɪxʷew]
+*mɪnɪχew
+[əˈt:ɪç]
+[ət:ɪxəmeow]
+[əˈt:ɪk]
+[kɪmɪnɪxwana:w]
+[kɪmɪnɪxwanawa:w]
+[niɣix] ~ [nigix]
+[ut:ɪnagan]
+*utɪnagan
+[nut:ɪn]
+[enut:ɪnat]
+[nɪnut:ɪnaw]
+[kɪtʃiˈmagəsu]
+[ekitɪməɣa:t]
+[nɪkitɪməɣaw]
+[kɪkɪtɪməɣaw] ~ [kɪkɪtɪməxaw]
+*kɪkɪtɪməgaw
+[məˈtadɪθ]
+*#θ
+[ˈpeɾuθte] ~ [ˈpeduθte]
+[ˈastam ˈpeɾuθte]
+*aθtam
+*#ɾ
+[ˈeapɪt̚]
+[ˈnɪtapɪn]
+[ˈkɪtapin]
+[nitɕipɪtəpɪn]
+[nuθˈtesɪn]
+[nɪˈkɪθtamɪn]
+?[kɪˈgɪθtamɪn]
+[*kɛgɛθtamɪn]
+[mu:s]
+[ˈmu:ʃwa]
+[aˈmɪ]
+[nɪamiˈɣɪn]
+[nɪamiˈɣaw]
+[ˈinɪnu]
+[ˈinɪnuwa] ~ [ˈinɪnuwak]
+[ˈinɪnu nanəmowɪn]
+[məʂˈkego] ~ [məskˈego]
+[məskixi] ~ [məʂkixi]
+[aləgwoˈdʒaz]
+[aˈmɪsk]
+[aˈpogosis] - [aˈpoɣosis]
+[eˈskimewak]
+[ˈtɕipəwa:n]
+[ˈtɕipowaja:n]
+[waja:n]
+[ˈmajxən]
+[ˈməskwa]
+[ˈwabəsk]
+[ˈnɪtːajan]
+*ˈnɪtajan
+[ˈoba] ~ [ˈoma]
+[ˈnɪtːajan ˈoma]
+[ɕuθˈtagən] ~ [sjuθˈtagən]
+[ˈɕuθtɕis]
+[siwaw]
+[nɪsiwəˈtan]
+[kɪsiwəˈtan na]
+?[kɪsiwəˈtan]
+[nɪˈt:ewɪxəta:n]
+[kɪˈt:ewɪxəta:n na]
+*tewɪxəta:n
+[et:ewɪxəteow]
+[ewiˈmɪtsut]
+[emuaˈwat]
+[ka:gi]
+[kɪdʊθteow]
+[kaˈgɪduθte:tɕɪk]
+[ˈtawnɪx]
+[ʂkuluɪx]
+[axɪsiɣimux]
+[axɪsiw]
+[egɪmitʃɪsutɕɪk]
+-tɕɪk
+[kaˈgɪduθte:tɕɪk axɪsiɣimux egɪmitʃɪsutɕɪk]
+[ˈanteː]
+[ˈnete:]
+[ˈu:ta]
+[uˈt:agəmux]
+[ˈnete: uˈt:agəmux]
+[wabənuk]
+[ˈwaθnaw]
+[ˈnete: ˈwaθnaw]
+[ˈkɪsɪpax]
+['maskwa]
+[nɪtut:ɪm]
+['majxən]
+[nɪ'majxən] *[nɪ'majxənɪm]
+[nɪ'majxana:]
+['kɪmajxan]
+[kɪ'majxana:]
+[ʔɔ:majxan]
+[ʔumajxana]
+[nɪskizəka]
+[wɪgəwam]
+[nigiɣ]
+[nɪdɛɵt̺ɛpɔ:n]
+[nɪ'dɛɵt̺ɛpɔ:na]
+[ʔutɛθtɛpɔːn]
+[ʔutɛθtɛpɔːna]
+[ʔeki nɪpahat]
+[ʔɛskweo ʔeki nɪpahat awa]
+[Mary ʔeki nɪpahat Peter]
+[ʔeki nɪpahatʃɪk Mary]
+[Mary ʔeki nɪpahaw]
+[Mary ʔeki pakamahat Peter]
+[mots Mary ʔeki pakamahat Peter]
+[mots kipakamahaw Peter]
+[ʔutʃɛ:maw]
+[Mary kiʔutʃɛ:maw Peter]
+[Mary ʔekiʔutʃɛ:mat Peter]
+[sama:gənɪs]
+[ʔeki pakamahatʃɪk anegi]
+[nɪˈkawit͡ʃɪn]
+[nɪˈtʊst̪ɛn ʔatawˈmox]
+[nɪˈt̪ʊst̪ɛn ʔataɣaˈmox]
+[nɪwɪt̪ʊst̪ɛn ʔataɣaˈmox]
+[wɪt̪ʊːsteu ʔataɣaˈmox]
+[nɪˈt̪ʊst̪ɛn]
+[nʊwit̪ʊst̪ɛn]
+[bɹɛnda ˈana]
+[bɹɛnda ˈawa]
+[nɪɣiskɪnɪmaw ana Bɹɛnda]
+[bɹɛnda {naːna} or {na ana}]
+[na]
+[nɪpʌɣɔt̪ɛn]
+[nɪmɪtʃɛntɪn]
+[sjutʃis]
+[nɪsiwʌtan]
+[nɪtejwɪxɪtan]
+[nɪpaxɪtamʊn]
+[nɪwimitʃsʊn]
+[sukaw]
+[mɪnopʌˈmatʃsun]
+[mɪnopɪmatsuɪn]
+[mɪno]
+[mɪnɑːsɪn]
+[mɪnɪsʌsu]
+[nɪmɪnojan]
+[tanɛxeː]
+[kɪnamaː]
+[nistamaːmina]
+[nistamina]
+[nista]
+[nistamaː]
+[kista]
+[kɪˈtutɛm]
+[kista mina]
+[kista maːmina]
+[kista t̪uːt̪a]
+[skɪneɣɪsis]
+[kɪsexjaːwʌk]
+[kɪsexaw]
+[t̪apwe nɪkɪsʊsʊːn]
+[t̪apwe]
+[nɪwiθt̪ɛmɑʔn]
+[nɪwiθt̪ɛmɑw]
+ɪˈnɪmɪtɕɪkʰ
+kɪˈniːmɪn
+ˈnɪnimɪn
+ˈniːmʊ
+kiˌnimɪˈnaːn
+kɪnimɪnaw
+nimɪnaːnawʌn
+witʌstejow nimɪnaːnawʌn
+kusˈpaθtʌwejow
+kusˈpaθtʌwejowakʰ
+kigusˈpaθtʌwejn
+wʌnʌwejow
+ikiwʌnʌwiːt
+kagiwanawit
+nɪkuspaθtawiːn
+niːna
+kiwʌnʌwejow
+ɪkiwʌnʌwejow
+nɪpːahaːt
+kinɪpahaw
+kɪkinɪpːʌhaw
+ɪkinɪpːʌhaːtɕɪkʰ
+kakinɪpːʌhaːtɕɪkʰ
+muːs
+atːɪm
+atːɪmakʰ
+atːɪma
+nɪtːɪm
+kɪtːɪm
+utɪm
+kɪmajɣʌnaːn
+kɪtɪmɪnaːn
+utɪmakʰ
+ɪskwejow
+naːpejow
+ɪskwejowakʰ
+napejowakʰ
+kɪtemenaːn
+kɪtːɪmakʰ
+kɪtɪmɪnax
+[maθtʌwanʌwiː] or [maθtʌwanʌwiːego]
+maθtɪʔ
+[ʊtemak]
+utɪmaʔ
+eɣo sæm ut̪ːɪmaʔ
+mʌnˈtuː
+[kɪsɪmanˈtu] or [kɪʃʑɪmanˈtu]
+kɪseːhaw
+kɪɕtɕɪmʌntuː
+nɪmɪnɪntɪn
+ɪmɪnɪntamaːn
+nɪmɪnujan
+nɪmɪnɔːjan
+umasnajgan
+umasnajganakʰ
+[musnajgʌn]
+[musnajgʌnə]
+umasnajganakʰ
+[ʊmusnajgʌn{ə,a}]
+[nugʊm]
+[gug{ʊ,ʌ}m]
+[ʊg{ʊ,ʌ}m]
+nɪkʊt
+kɪkʊt
+okʊt
+daːnɪs
+mɪstʌhiː
+[e məʃi ha ʑik]
+[ɪskʷeʊ]
+[st͡ʃjatːa]
+[s̪ɪs̪ɪp]
+[axɪsʊ]
+[axɪsiɣamo{x/kʰ}]
+[nʌ]
+[winʌ]
+[ʔawa]
+[awɪna]
+[ana]
+[maː˩˥]
+[maʔ]
+[matːɪ maː˧]
+[kɪsəpʷeθt̪ɛn na˩˥]
+[nista]
+[kista]
+[wista]
+[manɪtu məskʷa]
+[asːaj pɪnaː kəsɪt]
+[pɛtt͡ʃɪ wit͡ʃɪhɪnaːn]
+[mɑts kʷajesk nɪˈnimɪn]
+[mɑts kʷajesk kɪˈnimɪn]
+[mɑts kʷajesk nimɔː]
+[nɪsiːm]
+[nɪt͡ʃiːmɪt͡ʃ]
+[məsˈkʷɪsɪs]
+[pʊˈt͡ʃit͡ʃ]
+[pʊs]
+[maθˈtiːsa]
+[nɪtːɪtːɪtaw]
+[kisəwajaw]
+[wanɪwitamɪx]
+[kisəwajaw wanɪwitamɪx nɪtːɪtːɪtaw]
+[wanɪwi]
+[kɪtːɪtːawin]
+[wi{θt̪/ɕ}amaw]
+[ʔanˈt̪e ˈniɣɪx nɪt̪em]
+[ante]
+[pat̪əma napesas winəniɣan at̪oma]
+[ant͡ʃɪ]
+[ˈni:me]
+[ɑwɑːs tagusi]
+[kɪseːxuakʰ]
+[nɪt̪em ʔanˈt̪e u:iɣix]
+[nɪtajaːn]
+[nɪtaj{aː/o}w]
+[nɪtajow mɪnɪʍagan]
+[ˈni:su t̪ɕik nɪst̪e:sakʰ]
+[ˈni:su t̪ɕik naˈp:e:sisakʰ niˈsi:makʰ]
+[nɪtajan nɪɕut͡ʃɪkʰ nɪsimakʰ napesasakʰ]
+[wɑpɪhe daniːmɪn]
+[mɪtɔne kesoteɔ]
+[mɪʃtɕɛtʰ]
+[mat͡ʃi]
+[nɪtɪm antaʔ kɪsɪpax mɪstɪkʰ entapɪt]
+[ɑnte kɪsɪpax mɪstik nɪtɪm]
+[nɪtɪm ɑntekɪsɪpax mɪstik]
+[nɪtɪm ɑnte ɑwigiθ]
+[ante niɣɪx nɪtɪm]
+[nɪˈt̪em ʔanˈt̪e ast̪eu mit̪ɕʊsona:θt̪ɪkʰ]
+[nɪtɛm ɛtapɪ ɑnte kɪsɪpax mɪstɪk]
+[nɪˈt̪em ʔeˈt̪apetʰ ni:ɕt̪ʃə mit̪ɕʊsona:θt̪ɪkʰ]
+[nɪˈt̪em ʔanˈt̪e ˈniɣɪx eɣoma: u:t̪e:mak wanəwit̪:emex et̪:ajatʃikʰ]
+[nɪtɪmakʰ ante niɣɪx ekɔma: uteːmax wanawitnɪmɪx etat͡ʃɪkʰ]
+[ˈnukːum]
+[kɪseːno]
+[nɪˈmɪs]
+[eɣini:mɪt wastakusix]
+[ɛɣinimɪt utagusi]
+[{ɛ/ə}ni:mɪt]
+[niːmɔʔ]
+[wapahekənimɪn]
+[dɛbɛɣɔx]
+[nɪtʃiːmɪtʃ]
+[kʊtɔsɪkʰ]
+[wɔjan]
+[skot̪eo]
+[mɪtat̪aθ]
+[nɪnɪnaskomɪt̪ɪn]
+[ɛɣusɪʔ]
+[nisa:θt̪ewiu mɪstɪkʰ na:bɪsɪs]
+[ˈanəma mɪstɪkʰ ʔekospa:t̪oeʊ na:bɪsɪs]
+[nɪˈt̪em anˈt̪:a kɪsɪpa:x mɪstɪkʰ]
+[nɪˈt̪em wanəwit̪:emex et̪ajat ̚]
+[nɪˈt̪em ʔeˈt̪apetʰ anˈt̪:a kɪsɪpa:x mɪstɪkʰ]
+[nɪˈt̪em eɣi u:ˈiɣix ep:iθt̪owet]
+[ni:ɕt̪ʃə]
+[daniːmɪnaːn wɑpɪhe]
+[nɪsiːm]
+[ˈkukːum]
+nɪp:i
+nɪp:i nɪˈmɪinɪxʷɑn
+nɪˈmɪinɪxʷɑn nɪp:i
+ni:na ʔaˈwa
+*ʔa:wa
+*ʔawa:
+ˌʔalagʷaˈʧa:s
+nɪ ʔal{a/ʌ}gʷ{a/ə}ˈʧa:sɪm
+nɪ ʔal{a/ʌ}gʷ{a/ə}ˈʧa:sɪmakʰ
+nɪ ʔal{a/ʌ}gʷ{a/ə}ˈʧa:sɪmɪs:akʰ
+nɪ ʔal{a/ʌ}gʷ{a/ə}ˈʧa:sɪmɪs
+nɪ ʔal{a/ʌ}gʷ{a/ə}ˈʧa:sɪmɪʨ
+[wa:taluts]
+bɪnda
+ʔamihe:gʌmɔx
+ʔamihe:
+ʔɔt:agəmɔx
+ˈʔaxəsɔ
+ˌʔaxəˈsi:ɣʌmɔx
+mɪnɪˈxʷe:gamɔx
+mɛt:wɛ
+mɛt:wɛgamɔx
+mɪ̞ʨʊsɔnaθt̪ɪkʰ
+mɪ̞ʨʊsɔ
+muaw
+ˈmɪstɪkʰ
+ʔamɪɕʨɪɣɛjɪn anta amɪhe:gʌmɔx
+t̪a mɪɕʨɪɣɛjɪn
+t̪ɛ{p/b}ɪgox
+ʔap:ɪ
+pɛ:(Ɂ)tap:ɪ
+pɛ:htap:ɪ
+pɛ:tʊθtɛʊ
+ɛɣox
+pɛtʊθtɛawakʰ
+maθt̪ɛ ma: pɛ:tap:ɪ
+ʧi:ma:n
+t̪a:pʷe nɪmɪnɪntɛn nɪʧi:ma:n
+t̪a:pʷe nɪʧi:ma:n manat:an (sa) kɪʧi:ma:n (sa)
+sa
+pɔɣɔ
+nɪʧi:ma:n nɪmɪnɪnt̪ɛn pɔɣɔ
+nɪmɪnɪnt̪ɛn nɪʧi:ma:n pɔɣɔ
+nɪʧi:ma:n nɪmɪnɪnt̪ɛn pɔɣɔ mɑ:t nɪ sa:gi:haw
+[mɪt̪aːdɪθ]
+[niː{ɕ,s}uʧɪkʰ]
+[nɪɕtɔ]
+*[nɪʃtɔ]
+[niː{s,ɕ}o]
+*[nɪʃo]
+* #x__
+[ʔʌskiːx]
+[amixe]
+[mɪxɔ]
+[mɔxaːts]
+*[mɔhaːts] (she said the
+[aːskaow]
+[k˺ʌpːe]
+[mixok˺]
+[nɪʧaːxʊs]
+[tapːe gjuːɣeow]
+[ta-] (used to indicate future)
+[gjuːɣeow]
+[niːɣɪx]
+[p˺aːham]
+[mʌʧiː]
+[mɪnospʰɔɣʌn]
+[mɪno]
+[mɪstʰahiː]
+*[mɪstʰaxiː]
+[mɪstʰɪk]
+[k˺{u,ʊ}t̪:ɑsɪk]
+[e:nɪpɪt̪]
+[kɪnɪpoʷ]
+[ni:ɣɪs]
+*[nikɪx]
+[gɪsɪt̪:a]
+[wɑ:pɪxak]
+[ni:nʌ]
+[kiwɛt̪ɛn]
+[nɪsi:m]
+[nɪnɪpa:n]
+[nɪnimɛn]
+[kejɣa nɪnɪpa:n]
+[anɪɣi poɣox]
+[ʃtʰɪɣɑːn]
+[bɪbʊn]
+[kʊt]
+[skʰʊtagaːɪ]
+[skʰulʌwɪx]
+[uːsaʊ]
+[amɪxɛt͡ʃɪk]
+[at͡ʃɪmʌwak]
+[mʌsnʌjgʌn]
+[kɪmʊsnajgʌn]
+[ˈt͡ɕi:man]
+*[ˈt͡ʃi:man]
+[mɪsˈt͡ɕɛt]
+*[mɪsˈt͡ʃɛt]
+[ʔɛginɪpa'hat͡ʃɪk]
+[nɪt͡ʃɪˈwasɪmɪs]
+[nɪt͡ʃɪˈwam]
+[nɪˈsut͡ʃɪk]
+[teθtɪpɔn]
+*[deθtɪpɔn]
+[ta:nɪs] > [da:nɪs]
+[mi:nɪɕ]
+*[minɪs]
+[mʌ{ɕ,ʃ}kego] > [mʌskego]
+[ʔɛ'{g,ɣ]inɪpahat]
+*[ʔɛkinɪpa'hat]
+[{k,g,ɣ}inʌ
+[ˈno:kom]
+*[no{g,ɣ}om]
+[ˈke:ɣɔn]
+[ta:{k,g,ɣ}ɪˈkom]
+*[ta:{k,g,ɣ}ɪˈ{g,ɣ}om]
+[ˈmɪstɪkwa]
+[mɔnɛˈɣeɣwɑn ˈmɪstɪkwa]
+[nut̪ɪn]
+[ɛnut̪ɪnat]
+[nuːt̪ɪn]
+[niːt̪ɪm]
+[nɪt̪ɛm]
+[ˈasani]
+[mɪˈstasani]
+[kʊʷn]
+[kʊʷnawʌn]
+[mɪspʊʷn]
+[pɪpʊʷn]
+[nɪkat̪ʊθstɛn]
+[nɪkit̪ʊθstɛn]
+[takɔf]
+[ɕtʃjat̪a]
+[t̪axajow]
+[t̪axak̚]
+[nɪpi]
+[sipikwak] [sipiχwaw]
+[sipi]
+[pikuwtejoʷ]
+[usaw]
+[miχis]
+[miχisa]
+[inanuwaχan]
+[pʌχansakaj]
+[skʊˈtakaj]
+[tasijan]
+[tasakana]
+[maskasɪna]
+[nɪpejawɪn]
+[nɪpa]
+[nɪpaw]
+[nɪˈwapmaw]
+[kɪˈwapmaw]
+[kɪˈwapmaw naː]
+*[naː kɪˈwapmaw]
+[nɪˈkiwapmaw]
+[kɪkiˈwapmaw]
+[kaːki pɛtʌsˈtet͡ʃɪk]
+[kipɛtʌsˈtet͡ʃɪk]
+[kaː]
+[kaːjas]
+[nɪwapɪθt̪ɛn]
+[kɪwapɪθt̪ɛn]
+[waˈpɪθt̪eo]
+[t̪awapɪθt̪ɛn]
+[t̪awapɪθt̪eo]
+[nt̪a]
+[t̪exi]
+[skisɪka]
+[kʊt̚]
+[θt̪ɑkoj]
+[askiχ]
+[kɪtaj]
+[skata]
+[skat̚]
+[nuːtɪt̪ɪwan]
+[samakɪnɪs]
+[tʃiː]
+[ewapɪmat]
+daːnɪs
+dɛstapon
+taːpwe
+katuθtɪn ɕkuːlix
+mɪstɪk
+*mɪstɪkʰ
+masnajganakʰ
+ʔeɦeʔ
+*ʔexeʔ
+mɪx{ʊuo}ʔ
+*mɪh{ʊuo}ʔ
+tepekox
+mʌɕkeːgo
+[t̪əsagʌn]
+[deji]
+kɪdeːhi
+[nɪdeji]
+[odeji]
+skʊtːejow
+skʊtːaːgaj
+kɪpːaha
+skɔtːɛm
+masˑnajˑgan
+sɕtɕjaːtːa
+sɕtɕjaːtːa mɪstahiː
+watɕje
+watɕiːe
+mɪstɕjɛt
+mɪstɕiːɛt
+[mɪsˈdajhi:]
+atɪm
+atim
+nɪtɛm
+*atɛm
+kiɣibɪmbʌθtaːn na
+astʌm
+kiːsɪwajaw
+kɪbɪmbʌθtaːn
+bɪmbʌθtaw
+ˈnɪstoʔ
+masˑn̩ˑaːˑhiːˑgan
+[ˈwaˌbiɦak]
+[wastɛnomæ:gʌn]
+[nɪpahæt]
+[nɪ:suniˈja:mɪn]
+waskajgan nɪnidʊθt̪ɛn
+eki:dʊθt̪e(j)ax waskajgan
+nɪ ki:dʊθt̪ejan waskajgɑn
+nɪdʊθt̪ɪn
+nɪki:dʊθt̪ɪn
+sunijaw
+kɪsunijamɪn
+nɪtajan
+pejak nɪt:ajan
+pejak kɪt:ajan
+Ɂɪt:ajatʰ
+Ɂɪt:ajaʧ:ɪk
+wɛp:anejo sunijaw
+nɪwɛp:anɪn
+ʤigəlabɪsi:s
+Ɂɛgi: wɛp:ana:t udɪˈskʷɛ:ma
+bɪnɛ:sis
+ˈbɪne:jo
+t̪a tʊθt:ejo
+Ɂɛ:sibiwakʰ
+Ɂɛ:sibixʷaw
+Ɂɛ: dʊθtejan
+Ɂɛ: ki:dʊθtejan
+Ɂɪmɪɣɔkʰ
+[eːgɔ]~[eːɣɔ]
+[maxɛ]
+[maxɛdun]
+[tagɔf]
+[siːpiːxʷaːw]
+[pep:əl{o/ə}wat̚]
+[diː]
+[pɪkɔt̪eɔ]
+[ot̪easki]
+[aski]
+[mitʃɪsu]
+[ɛsigʷʌnɛt]
+[ute aski]
+[mɪst̪ajt̪ɪ:m]
+[ˈʔaxɛsi:ɣʌmɔx]
+[niʔatʊskən]
+[nɪwabmaw]
+[niʔatʊskɔn]
+[miɕpɔn]
+[kuːnəwan]
+[nuːt̪ɪːnəwan]
+[nuːt̪ɪːn]
+[biɣɔpanet̚]
+[kɪsit̪eo]
+[ˈwɑp:ɑn]
+[apːɪsiːs]
+[apːɪsiːsuʔ]
+[apːɪsaːsɪt]
+[mɪst͡ɕɛt]
+[dun]
+[nɪwiːwat]
+[mɑːts]
+[maʔ]
+[muːna]
+[u:ɕaw]
+[mɪxaw]
+[si:pi:x]
+[paˈp:a:si:]
+[ɛgipiɣunɪt]
+[bɛdɪθt̪eo]
+[mɛt̪ʷeo]
+[ʔaxəsju]~[ʔaxəso]
+[atʊskeo]
+[muɕut̪wen]
+[kimasnajɣe:o]
+[pəɣɔn sa:ɣaj]
+[apːɪ]
+[gʊt̪ɔ:sɪk]
+[apɪ:si:s]
+[apɪ:si:su]
+[apɪ:sa:sɪt]
+[piguˈt̪eo]
+[kuːn]
+[aski]
+[sigʷan]
+[alagʷɪdʒaːs]
+[ʔasɪniː]
+[nuˈt̪:enoˌwan]
+[ˈnip:ɪn]
+[mitɕʊsona:θt̪ɪkʰ]
+[siɣɔneɔ]
+[muːna ˈgegʌn]
+[nisutʃɪk]
+[əmɛt̪ʷetʃɪk]
+[bene:wan]
+[mɛt̪ʷe]
+[ˈsiɣonew]
+[wabɪxe]
+?[nisutagɔfa]
+[nɪp:i:]
+[wa:pɪxakʰ]
+[nuˈt̪:en]
+[ˈpɪp:ɔn]
+[ʔat̪:oɕkew]
+[ʔɛɦɛʔ]
+[kiːwat]
+[kɪdiː]
+*[fiːwat]
+*[nɪb:i:]
+ka(h)
+ma
+ego
+egoma
+maθt̪{e|ɪ}maː
+kɔnəma
+dabwe ma mɪɕt͡ʃɛt
+maθt̪e
+t̪at̪uθt̪e{o|u}
+naʔ
+maʔ
+næ
+d͡ʒi
+ape
+mus
+mɪstus
+ˈpɪpun
+nipɪn
+{s|ɕ}igw{a|ɪ}n
+asajit̪agak
+t̪agwakɪk
+t̪agwɔgɪn
+at̪uskeo
+atuskeawak
+munʌ
+mu:
+muawt
+nɪsagiɪt̪ɪn
+ɪsagisit
+kɪsagiɪtɪnan
+emitɕusunan
+kɪmitɕusunan
+imitɕusujakʰ
+nɪsagi{ɣ|ɦ}awak
+nɪsagiɦaw
+nɪsagiɦaw nɪdanɪs
+nɪsagiɦaw nusɪsɪn
+esagiɦat
+esagiɦeo
+ukʊt
+usɪt
+ustɪgɔn
+umʌsknajkaθtɪk
+utɛm
+egɪswasɪt
+ekusgunamʌɦat
+asaij
+asaij bɛbʌno
+stigɔn
+esagiɦat͡ʃɪk
+esagiɦeuwak
+nɪsagiɪtɪnaw
+kɪsagiɪtɪnawaw
+kɪsagiɪtəna
+kɪsagiɣaw (na)
+?
+ɪwabəmɪt
+nɪwapəmaw
+ewapəmeow
+[kɪsʌwaːsɪtː]
+[nɪsaːgijɪt̪ɪn]
+[ɪwaːp˺ːmɪt˺]
+[ɛɣiːwɛp˺ʌnɪt]
+[ɪwaːp˺maːt˺]
+*#h_
+[tagof]
+*[tagɔf]
+[nɪpaːfɪn]
+[kɪpaːfɪn]
+[wɑːpɪ]
+[wɑːp˺meo]
+[nɪwɑːp˺maow]
+*Brenda couldn’t think of “I see myself”
+[kɪwɑːp˺maow]
+?[kɪwɑːp˺maowʌnan]
+[k˺ɪwɑːp˺ɪθt̪ɛn’]
+[kɪwɑːpɪθt̪ejax]
+[ni:pi:]
+[nɪpia]
+[{ʌ,a}skiθ]
+[{ʌ,a}skiθtaɣaw]
+[mʌskəwaw]
+[kɪmisi:na:]
+[wasaskʊtapio]
+
+[animijan]
+[nɪt̪ajan]
+[nɪt̪ajaw]
+[nɪsunijamɛn]
+[kɪt̪ajan]
+[kɪt̪ajaw]
+[et̪a:jat̪]
+[et̪a:jat͡ʃɪk]
+[ɪt̪ajak]
+[suni:jaw]
+[pɛjak] ?
+[nɪtajaːn]
+[nɪtajaːʊ]
+[kɪtajaːʊ]
+[kɪtajaːn]
+[nɪmɛnanʌwaːn]
+[mɪsaɣeowenan]
+*[nɪtɛmaːx]
+[nɪtɛmaːk]
+[pʊs]
+[pʊd͡ʒit͡ʃ]
+[nɪpʊsɪm ɛɣɪsɪt]
+[sɪgwan]
+[nɪsigɛneo]
+[sigɛt]
+[ɛɣɪsigɛt nəntɛn nɪmaskusɪna nɪpus]
+[nɪpus ɛɣɪsigɛt nɪntɛn nɪmaskʌsɪna]
+[kɛɣat nɛnɪpʌhaʊ]
+[nɛnigɛsʌwasɪn]
+[ɛnʊtɪnat]
+[ɛtaɣʷagɛx]
+[ɛpagɪsɛt]
+[kɪtɛntɛn]
+[t͡ʃiɛ]
+[kɪtɛntɛman]
+[kɛɣɔn nɪtɛntɛman]
+[kɪwapmitɛn]
+[nɪpa], *[nipa]
+[nɪp:ɪ], *[nip:ɪ]
+[nimɔ]
+[amɪh], *[amih]
+[nipawe]
+[ʔɛnipawɪn]
+[ʔɪnipawɛt]
+[kɪnipawɪn]
+[nɪh]
+[ʔawɛ:na], *[hawɛ:na]
+[ʔawɛ:na ʔawa:], *[ʔawɛ:na hawa:]
+['ni:nah]
+[bɛ:h]
+[ni{j,*ʔ}amihit{n̩,ɪn} awa:w]
+[pogoh] > [pɔgɔh]
+[nimo], *[nimɔ]
+[mɛtweo], *[mɛtweɔ]
+[pomɛθtɛ], *[pɔmɛθtɛ]
+[mɪsɪgitɔh], *[mɪsɪgitoh]
+[ke:ɣɔ:n], *[ke:ɣo:n]
+[mɪxɔ:kʰ]
+[mɪˈ{s,ɕ}tɪkʰ]
+[paɣaˈtwɛt]
+[mɛri paɣaˈtwɛt]
+[mɛri ɛsaɣiat̚ dʒak]
+[dʒak mɛri ɛsaɣiat̚]
+[nɪˈnimɪn]
+[kɪˈnimɪn]
+[nimo]
+[ɛnimɪt̚]
+[nimɪ]
+[kɪnimɪnan]
+[ɪnimian]
+[ɪnimiax]
+
+[ɪnimɪt͡ʃɪk̚]
+[pafɪ]
+[nɪpafɪn]
+[kɪpaːfɪn]
+[nɪpaːfɪt̚]
+[kɪpaːfɪnan]
+[ɪpaːfiax]
+[ʔɪpaːfɪt͡ʃɪk]
+[nɪkiniːmɪn]
+[kɪkinimɪn]
+[kɪkinimɪn naː]
+[ɛkiniːmɪt̚]
+[askaw ɛnimɪt̚]
+[askaw]
+[kapːɪ ɛnimɪt̚]
+[tanimɪn]
+[kanimɪn]
+[kanimɪnan]
+[ɛɣnimɪnax]
+[suχɪ ɛɣnimɪnax]
+[ɛkoman kɪst͡ʃɪpafɪn]
+[pewit͡ʃɪhɪnan]
+[petɪsʌmijax]
+[pewɪt͡ʃɪhɛn]
+[pepɪwit͡ʃɪhewʌk]
+[wit͡ʃɪhɪn]
+[peː]
+[peːmɪt͡ʃɪke]
+[mɛʃt͡ʃɪmaobabawa]
+ʔamɔh
+ʔamu:
+wi:θtʌm
+*wi:ðdʌm
+ʔɛ: dʊθte(j)an
+ˈmɪstɪkʰ
+ˈmɪʃtɪkʰ
+ni:jʌʔ
+ni:lʌʔ
+ni:ðʌʔ
+ma:
+na:
+kijabɪt na: kimɔw{a/ʌ}n
+kimɔw{a/ʌ}n
+ni: bɪt̚
+dɛ:θtabɔn
+mɪnɪɣegamɔx
+naʔ
+wɑ:bʌsk
+pe:, pi:, pa:, pɔ: pɑʔ
+pa: ~ ba
+ha{ʊ/w}
+[niɕutɕik t̪e:mak net:ajan]
+[ˈt̪eboɣox muxəˈma:na net:ajan]
+[egi kimotetʰ t̪aban]
+[maˈt̪eo ˈtaban awana eɣi]
+[t̪at̪oste:oakʰ at̪:awegomox]
+[kimiˈnaw ɕuniaw]
+[kɪbumoθt̪eoak]
+[kɪwɪtɕɛwaw at̪:ɪm epomeθt̪etʃikʰ]
+[eɣi mitɕosutʃikʰ]
+[eɣi mitɕosutʃikʰ konaseo]
+[mitɕosu]
+[skəˈni:gəsis ˈkinawaw]
+[kina skəni:gɪs]
+[nɪ kut]
+[o ko{ʌ}t]
+[kiwapəmawakʰ]
+[kiwapəmɪt̪ɪn]
+[kiwapəmɪt̪aw]
+[ep:e:got]
+[eɣi matut nɪsɪgus]
+[eɣi matut kɪsɪgus]
+[nɪt̪e:nten]
+[ʔeˈt̪e:nt̪ama:n]
+[eɣi t̪e:nten]
+[eɣi t̪e:ntaman]
+[eˈt̪e:ntax]
+[eˈt̪e:ntam]
+[naˈpew eˈt̪e:ntax]
+[eˈt̪e:ntam naˈpew]
+[nɪwabeθt̪en]
+[ŋkiwabeθt̪en]
+[ewabeθtax]
+[naˈpew ewabeθtax]
+[mistik paxesiu]
+[ˈegi ˈpaxesɪt]
+[nɪɕut͡ʃɪ nɪteːmakʰ]
+[nɪtajan nɪɕutemakʰ]
+[tɛpɪkox nɪtajan moxamanə]
+[eɣimotɛt tapan]
+[məteɔ tapan awanə eɣi]
+[tatost̪eawak atawekɔmɔx]
+[kɪminat ɕuniaw]
+[kɪminaw ɕuniaw]
+[kɪpɪmpəs̪t̪eawak]
+[kɪwit͡ʃewaw at̪ɪm epɔmpəs̪t̪et͡ʃɪk]
+[eɣi mit͡ʃɪsut͡ʃɪk]
+[eɣi mit͡ʃɪsut͡ʃɪk kunɪseɔ]
+[mit͡ʃɪsu]
+[kinawaw skɪnikəsɪs]
+[nɪt̪ɛnt̪ɛn]
+[nɪwapɪs̪t̪ɛn]
+[ɛtɛnt̪aman]
+[eɣit̪ɛnt̪ɛn]
+[eɣit̪ɛnt̪aman]
+[neɣiwapɪs̪t̪ɛn]
+[ɛt̪ɛnt̪am]
+[ɛt̪ɛnt̪ax]
+[ewapɪs̪t̪ax]
+[napeɔ wapɪs̪t̪ax]
+[napeɔ t̪ɛntax]
+[at̪ɛnt̪am napeɔ]
+[pakɪs̪t̪iu mɪstɪkʰ]
+[siɣəneɔ nɪpi:]
+[eɣipakɪsɪt mɪstɪkʰ]
+[ni:pi:]
+[nɪkʊt]
+[ɔkʊt]
+[kɪkʊt]
+[kɪwapɪmawakʰ]
+[kɪwapɪmɪt̪ɪn]
+[kɪwapmɪtnaw]
+[epejakʊt]
+[eɣimat̪ʊt nɪɕiɣʊs]
+[eɣimat̪ʊt kɪɕɪɣʊs]
+kɪːgɪˈn̪ɔs̪kʌˌs̪ʊn̪
+nɪgɪˈn̪ɔs̪kʌˌs̪ʊn̪
+ʔegɪˈn̪ɔs̪kʌˌs̪ʊt̚
+gɪn̪ɔs̪kʌs̪ʊʔ
+ʔewigɪˈn̪ɔs̪kʌˌs̪ʊt
+gɪˈn̪ɔs̪kʌˌs̪ʊʔ mʌskwʌ
+ana mʌskʌ ekɪnoskʌsut̚
+mɪsɪgɪtu mʌskwʌ ekɪnoskʌsut̚
+mʌskwʌ ʔegɪnoskʌsʊt
+ekɪnoskʌsut͡ɕik mʌskwʌk
+ekɪnoskʌsut͡ɕik mɪstɪkwa
+mɪstɪkwa ekɪnoskʌsut͡ɕik
+ˈwabʌsk
+ekɪsɪwasɪt mʌskwʌ
+ana mʌskwʌ ekɪsɪwasɪt ekɪnoskʌsut̚
+pɛdɪθteu ekɪsɪwasɪt mʌskwʌ
+mʌskwʌ pɛdɪθteu ekɪsɪwasɪt
+*ekɪnoskʌsu
+pɛt͡ɕipa:no
+mɪmɪt͡sun
+kɪkɪskɛntɛn ɪmɪt͡sujaːn
+paxwesʌgɔn
+kuneseo
+umʌ kuneseo
+deɦemɪnʌ
+deɦemɪn
+deɦe
+nɪdeɦe
+nɪdeɦemɪn
+nɪdeɦəmɪnʌ
+deɦeawak
+nɪdeɦejak
+nɪk udeɦemɪnʌ ugɪ
+nɪmamawa uteɦemɪnʌ
+ukɪ
+aneɣi
+nɛɣi
+ʌnumɪn
+mɪnɔmɪn
+*ʌnu
+stɪgɔnɪma
+stɪgɔn
+skiːsɪga
+skiːsɪk̚
+utɪnɪɣean teɣemɪnʌ
+nɪkʊstaːt͡ɕɪn
+kɛgustɑhɪn
+nɪkʊstahaw
+nɪkʊstahaw nɪk
+nɪk nɪkʊstahaw
+ekustahɪt nɪk
+nɪk ekustahat ʌwɛnʌ
+nɪk ekustajheo ʌtːɪm
+ʌtːɪm ekustajeo nɪk
+nɪkʊstaːt͡ɕɪn enutːɪnuwɑn
+?
+aˈwa ʌˈt:ɪm
+ana ʌˈt:ɪm
+awajta ʌˈtːɪm
+awajta
+anawajta ʌˈtːɪm
+net:e ʌˈtːɪm
+ano ajta ʌˈtːɪm
+awajta bebi
+omajta mʌskɪsɪn
+mʌskʌsɪnʌ
+uma mʌskasɪn emixɔk
+anuma mʌskʌsɪn emixɔk
+aneɣi mʌskʌsɪn emixɔk
+aneɣik mʌskʌsɪnʌ emixɔk
+emixɔk aneɣik mʌskʌsɪnʌ
+net:e asteu emixɔk mʌskʌsɪnʌ
+nɪnuθtesɪn
+nɪkɪθtamɪn
+nɪwɪnɪpan
+nɪpewɪn
+?kɪpewɪn
+tɛθtʌpun
+nɪtɛθtʌpun
+kaxɛnːan
+ʌwenʌ
+mɑt͡s ʌwenʌ
+mɑt͡s kaxɛna:n
+mɑt͡s kaxɛna:n tatuθteax
+[nɪki'wiθtʌmaw kane'tut:ə]
+[kane'tut:ə kɪ'tɪt:ɪn]
+[punia'tuskeo]
+[nɪki 'wiθthəma:wʌk eka't:atstaxik]
+[nɪki 'wiθthəma:wʌk]
+[eka't:atstaxik]
+*[mɒts 'tut:ə]
+[kanɛ'tut:ə]
+[kɪ'tit:ɪnawa:w]
+[kɪ'wiθtamawak mɒts tatut:ax]
+[-t:ax]
+[nɪpa'xɪsɪnɪn]
+[nɪt:eo wɪstə'gɔnɛn]
+[kɪt:aj]
+[nɪt:aj]
+[məxɪt:aj]
+['njaxusʊn]
+[nɪ'axusʊn]
+[nɪstɪgɔ:n]
+[gɪstɪgɔ:n]
+[ustɪgɔ:n]
+[u-]
+[tɛnɪni:]
+[stɪgɔ:n]
+['stɪgɔ:n 'antɛ tɛmut͡ɕɪstak]
+['ta:xaj]
+['tu:skɪ 'ta:xaj]
+['napɪ t:ɪʃən]
+[-sa:]
+[mɒts kɪ't:agusən 'ni:nʌ sa:ni'jakusɪn]
+['ni:nʌ sa: ni'jakusɪn]
+[ni'jakusɪn]
+['ni:˦nʌ sa:]
+#['ni:˨nʌ sa:]
+#['ni:nʌ ni'jakusɪn]
+#['ni:nʌ ni'jakusɪn sa:]
+['axuˌs{ʊ,o}]
+[ˌski:xɪ'xana]
+['skisɪkə]
+[t͡ʃɪsˈt͡ʃijə]
+[tʌs't:ut:ɪn]
+[kɪ't͡ʃe:kɪt]
+[pʊ't͡ʃɪskə kɪ't͡ʃe:kɪt]
+[kɛ˦st͡ʃɪta: kɪ't͡ʃe:kɪt]
+[kɪ't͡ʃe:kɪta:]
+[kɛst͡ʃɪˌta:k kɪ't͡ʃe:kɪta:]
+[mʊskʌxjune:ɔ]
+[ewabmak]
+[ewabmat John]
+[ewabəmat]
+[ewabmat John egɔma: John ewabmat]
+[Peter ewabmat John]
+[peter wapʊm]
+[wapʊm peter]
+[ewabmat Peter John]
+[ewabmat Peter John]
+[Petersa: ewabmat John]
+*[ewabmat Peter Johnsa:]
+[Peter gimabmawsa:]
+[Peter gimabmaw Johnsa: ]
+[kɪme:twe:ɔ haki]
+[gitwɛntɛn tɛmentwe:ɔ haki
+[gamɛnɛntɛn gispɪn ɛmɛtwɛt haki]
+[etɛntaman ɛmɛtwɛt haki]
+[ɛmɛtwɛt haki nɛdɛndɛn]
+[ɛpʊskɪnat ɛmɛtwɛt]
+[nɪpaskɪθtɛn skɔθtɛm]
+[ne apaxin skɔθtɛm]
+[ne apaxin pʊspabʊn]
+[apaxigate:ɔ ʊtagamɔx]
+[paskɪθte:ɔ skɔθtɛm]
+[kɪp:ajagaθte:ɔ]
+[kɪp:ajɣe:ɔ]
+[eigi kɪp:aɦat skɔθtɛm]
+[skɔθtɛm paskɪθte:ɔ]
+[bisd͡ʒɪpepʌlawat]
+[bisd͡ʒɪskʊte:ɔ]
+[pasʊte:ɔ waskajgʌn]
+[pasʊte:ɔ nɪwaskajgʌn]
+[eigi pasutek nɪwaskajgʌn]
+nɪmɪnɛnʌmaw mastajtɛm
+ʊta nɪtapian nɪmastajtɛm
+ʊta nɪmastajtɛm
+gɛsapax
+nɪwɪtʃɪtapmaw nɪmastajtɛm
+tapanask
+nɪtagupanɛn
+ɛspishʌ
+tapanask ɛspishʌ
+kɪtapɪn
+kɪ'tihan
+tihʌ'ma:
+wabaxaw nɪmastajtɛm
+nɪsujɛk nɪmastajtɛmak
+nɪsu wabaxɛjɛk nɪmastajtɛmak
+[napeo]
+[ana napeo]
+[nape:wak]
+[anɪgi nape:wak]
+[mɪstɪkʰ]
+[ana mɪstɪkʰ]
+[Mary awa]
+[Mary ana]
+[nɛt:ɛ Mary]
+[t:ɛθtɛpon]
+[nɪt:ɛθtɛpon oma]
+[nɪt:ɛθtɛpon anɛma]
+[antɛ: nɪt:ɛθtɛpon]
+[mɪstɪkwa]
+[Mary ɛkɔ John ɔ:hɔ]
+[Mary ɛkɔ John nɛtɛtʃɪkʰ]
+[nɪt:ɛθtʌpʊna]
+[nɪt:ɛθtʌpʊna oki]
+[nɪt:ɛθtʌpʊna anɛhi]
+[nɪt:ɛθtʌpʊna ant:ɛ:hik]
+[nɪwa:pʌmɪsʊn]
+[wa:pʌmmʊn]
+[mu]
+[kɪnɑskʌsu napeo]
+[ɛkɪnɑskʌsut napeo]
+[kɪsɛheo]
+[kɪsɛheo napeo]
+[kɪnɑskʌsʊtʃɪk Mary and John]
+[kɪnɑ:pɛgikʰ tɛθtɛpona]
+[kɪnɑ:pɛk tɛθtɛpon]
+[a.ʤæk]
+[nɪ.t̪a.ʤæk]
+['kʰɪ.t̪a.dʒæk]
+[pa.wa.gʌn]
+['u.ta.dʒæk]
+-
+#[ʊ.ta.dʒæ.ka]
+[nɪp:a.wa.gʌn]
+[o.pa.wa.gʌn:a]
+[o.pa.wa.gʌn:a]
+[keʰ.pa.wa.gʌn.nɪ.mak] or [kʰɪ.pa.wa.gʌn.na]
+[nɪ.tɛm]
+[a.tɛm]
+[nɪ.tɛ.ma]
+[nɪ.kaɹ.ɪm]
+[nɪ.na.pim]
+[na.peo]
+[ʔɛs:kʷe.o]
+[nɪ.tʊs:kʷem]
+[pa.fej]
+[wi.fʊ.mɑ:gʌn]
+[ni.'wa.pə.me.sun]
+[wapəmʊ.nejx]
+[nɪ.'wa.pə.me.sun.wa.pə.mʊ.nejx]
+#[ni.wa.pə.me.sun.ɛ.te.'nɪ.paj:an]
+[ɛt.to.no.wat]
+[na.tʑe.'p̚iθ.taw]
+[maʰtʑi]
+[maʰtʑiw]
+[maʰtʑi.atɪm] or [atɪm.maʰtʑi]
+[ɛt.to.no.wat.alɪ.kʷɪ.dʑas]
+[kɪnɔɣʷej.aɣʷeneo]
+[kɪnɔɣʷej.aʰ.wes.siw]
+[mɑts.ɛt.to.no.wat.ali.kʷɪ.dʑas]
+[a.tɪm.ɛt.to.no.wat.alɪ.ɣʷɪ.dʑæz'za]
+[a.tɪm.mɑts.siw.ɛt.to.no.wat.alɪ.ɣʷɪ.dʑæz]
+[apo.ga.sis]
+[atɪm.apejagut.ettonowat.ni.so.aligʷidʒasa]
+[e.mu.wat.alikʷidʒasa]
+[nɪtɛm]
+[nɪtem.ma]
+[nɪ.tem.ma.ni.'su.ˌtʑɪk]
+[nɪs.tu.dʑɪk.nɪ.tem.ma]
+[nɪ.tem.mak̚.nɪs.tu.dʑɪk]
+[pɪ.hweso.nɪ.tem]
+[nɪstu.tʑik.nɪ.temmak.bɪ.wesok]
+[pi.hwe.so.nɪ.stu.dʒik.ni.tem.mak.ɛ.to.no.wa.dʒik.a.li.kʷɪ.dʒas]
+[nɪ.ma.dʒin]
+[kɪ.ma.dʑin]
+[kɪ.ma.dʒi.nan]
+[e.ma.dʒi.ax]
+ma:ʧi
+nɪ ma:ʧi
+nɪ wit:ɛ: ma:ʧi
+kɪ ma:ʧi:n
+(ʔɛ) ma:ʧijʊ
+ma:ʧina:n
+ma:ʧina:x
+ma:ʧihewak
+kɪ ma:ʧi:n
+mus nɪ ma:ʧɪhaʊ
+mus ʔawa
+mus ʔana
+Mary ʔawa
+Mary ʔana
+nɛ:tɛ Mary
+dɛθtʌbʊn o:ma
+dɛθtʌbʊn anəmʌ
+dɛθtʌbʊn antɛ:
+ʔawʌjt:a dɛθtʌbʊn
+ʔawʌjt:a Mary
+Mary ɛ:kɔ John ɔ:hɔ
+Mary ɛ:kɔ John anɪhi
+dɛθtʌbʊna ɔ:ki
+dɛθtʌbʊna anɪgʰi
+Mary ɛ:kɔ John nɛt:e:xɪkʰ
+dɛθtʌbʊna ʔant:e:xɪkʰ
+nɪ na:pɪm
+na:pɛɔ
+ʔɪskʷɛɔ
+nɪ tʌslʷɛ:m
+nɪt:ɛ:m
+ʔat:ɪm
+nɪ kaɹəm
+nɪ kaɹəmʌ
+nɪ t:ɛ:mak
+kɪwigəˈna:n
+ʔʌt:ɪm pɪm:ɪtɪsɪneɔwatʰ alʌgʷɪʤa:s
+nɪ kɪˈse:heɔ ʔʌt:ɪm
+kɪˈse:heɔ nɪˈt:ɛm
+nɪ kɪˈse:heɔ usaʊ ʔʌt:ɪm
+nɪ kɪˈse:heɔ usaʊ ʔʌt:ɪm ʔusaʊwabʌn
+nɪ ˈwɑ:pʌmɪsʊn wɑ:pʌmʊnɪx
+wɑ:pʌmʊn
+nɪ ˈwɑ:pɪθtɪn
+*ˈwɑ:pɪθtɪn
+nɪ ˈki:wɑ:pɪθ̩tɛn
+ŋ̩ˈki:wɑ:pɪθtɛn
+nɪ ma:maʊwa ʔʊkɪse:heɔ ʔʌt:ɪm
+nɪ ma:maʊ ʔʌt:ɛm kɪse:heɔ
+[kɪpʌskɪnɛn]
+[kɪnahiːn]
+[kɪnahiːn ebɪmbʌθdajɪn]
+[nɪnahiːn ebɪmbʌθdajan]
+[nahijo ebɪmbʌθdat]
+[atːɪm antɛ awanawitːɛmex]
+[atːɪm antːe awanawitːɛmex waskajgan]
+[takaskɪθdan]
+[takaskɪθdan tainɛmaʔamowan]
+[kɪstama takaskɪθdɛjan tainɛmaʔamowan]
+[kɪstama]
+[tamitʃɛsunanawan antɛ]
+[tamitʃɛsunanawan antɛsi etːuθteax]
+[mɑt kegon nɪwabɪθdɛn]
+[mɑt nɪwabɪθdɛn kegon]
+[mɑt ewabɪθdax kegon]
+[mɑt kegon ewabɪθdax]
+*[kegon mɑt ewabɪθdax]
+[mɑt wabɪθdan]
+[kegonma]
+[kegontɕɪ]
+[mɑt wɑbʌm mɪstɕɪk]
+[munɛgegon mɪstɕɪk]
+[mɑts nɪwɑbɪθdɛn mistɕɪk]
+[emɪnɛnta]
+[emɪjɛnta]
+[mɑts mɪnɛntɛn]
+[muhats mɪnɛntɛm]
+[ɪtagisuwasɪt]
+[mɑts awɛna mɪnɛntax]
+[mɑts mɪnɛntax awɛna]
+[nɪpɪgɔtːɛn]
+[mɑts tamɪnɛnta awɛna]
+[ɛsa manata]
+[munɛsa]
+[ɛgiwitːɛm kɪmɪnɛntɛn uma nɪtɛntɛn]
+[mɑts kɪtːɪtːɪn]
+[mɑts kɪnahin]
+[mɑskustʃ pːatːɛma]
+[kijabɪt]
+[kijabɪt inɛnanɛmɔː]
+[inɛnanɛmɔː kijabɪt]
+[nɪgiwaːn]
+[gɪgiwaːn]
+[nɪtːapːɪn]
+[utːɛ niɣɪʔ nɪtajan]
+[utːɛ nɪtajan niɣɪʔ]
+[niɣɪʔ utːɛ nɪtajan]
+[mɪstahi kegɔn tamitʃɛsunaːn]
+[mɪstahi asteo tamitʃɛsunaːn]
+[mɑnɛgegɔn mitʃɛsujan]
+[mɑts kegɔn demitʃɛsutʃɪk]
+[mɑt nɪtajan kegɔn tamitʃesuːn]
+[inɪnanamɔ kijapʊt]
+[matskʊtɕ patɪma ta inɪnanamɔ]
+[mit͡ʃəsu]
+[mit͡ʃəsunaθtɪk]
+[maskəhjuneɔ]
+[at:ɛskju]
+[atːuske]
+[atːuskeo]
+[at:ɛskeowat]
+[masnagaθtɪk]
+[masnɛgɪn]
+[masnajxe]
+[masnajxeo]
+[mɪnɪɦɔ:gan]
+*[mɪnɪhwaθtɪk]
+[mɪnaθtɪgeo]
+[sumagɪnɪs]
+[nɪdɛθdapɔn]
+[kɪseheo]
+[nɪkɪseheo dɛθdepon]
+[kɪseheo nɪdɛθdepɔn]
+[nɪdɛθdepɔn kɪseheo]
+[nɪgiseheo usaw dɛθdepɔn]
+[usaw nɪgiseheo dɛθdepɔn]
+[manatːan]
+[manatːan nɪdɛθdepɔn]
+[manatːɪsɪt nɪt:ɛm]
+[ŋgijamɛhawak sumaːgɪnɪs antːɛ]
+[sumaːgɪnɪsak]
+[nipːi]
+[nipːia]
+[ŋgɪwabəmawak sumaːgɪnɪs antːɛ]
+[nɪwabaməsun]
+[wapːəmɔnɪx]
+[ŋgiwabəmaw sumaːgɪnɪs antːɛ]
+[ŋgiwabəmisun]
+[kigiwabəmisun na:]
+[kegɔn kɪwabəθdɛn]
+[awɛna kɪwabəmaw]
+[awɛna kɪwabəmɪt̚]
+[awɛna atːɪm]
+[awɛna ut:ɪm]
+[gaxɛnaw at:ɪm]
+[awɛna utːɪmawa]
+[masunatahɛgan t͡ʃɛgast:epejuht͡ʃegan]
+[t͡ʃɛgastːɛ]
+[egan]
+[tːabːan]
+[mʌsnajgan]
+[ɛginɪp:ɪt]
+[muhaman]
+[unagan]
+[kɪwabəθdɛn na:]
+[awɛna kɪwapəmaw]
+[awɛna gikiwapəmaw]
+[tanteː kɪwapɪθtɛn]
+[antːe ŋgiwapɪθtɛn]
+[kɪh]
+[ki:]
+[nɪh]
+[awɛna giwapəmat]
+[kegɔnst͡ʃɪ tuːtaman]
+[ust͡ʃə]
+[kegɔn kɪtutːəman]
+[ust͡ʃɪ panɪt sipix]
+[kegɔnst͡ʃɪ kɪgɪtuːtaman]
+[kegɔnst͡ʃɪ patən]
+[kɪkisɪθtan naː]
+[kɪkisɪθtan]
+[kɪkisɪθtan na: ma:]
+[mat kikɪsɪθtan]
+[nɪkɪsɪθtan sa:]
+[kikɪsɪθtan t͡ʃi:e]
+[kɪgɪna:skɪn]
+[kɪnaːskɪs]
+[ʔɪkɪnaːskɪn]
+[mats kɪkɪsɪθtan t͡ʃi:e]
+[ekɪnaskɪsɪt]
+[mats nahiu ewikanaskɪt]
+[kwajas kɪpɔmoθtet]
+[kwajask]
+[kwajask enɪgɪmot]
+[kwajask enɪgɪmoak]
+[kɪnɪgamoak]
+[mats kɪnɪgamoak]
+[mats kwajask enɪgɪmoak]
+[nɪkisɪθtana]
+[kɪgisɪθtana na:]
+[nɪkias'tɛ:n mʌs'najgan an'ta mit͡ɕɪsu'naθtik]
+[an'ta mit͡ɕɪsu'naθtik]
+['kiasteo mʌs'najgan an'ta mit͡ɕɪsu'naθtik]
+[ɛ'kiastejawak mʌs'najgan an'ta mit͡ɕɪsu'naθtik]
+[eˌkiastejaˈjax mʌs'najgan an'ta mit͡ɕɪsu'naθtik]
+[mʌs'najgan an'ta nɪkias'tɛ:n mit͡ɕɪsu'naθtik]
+[an'ta ŋgiastɛ:n mʌs'najgan mit͡ɕɪsu'naθtik]
+[mɒts ŋgiastɛ:n mʌs'najgan an'ta mit͡ɕɪsu'naθtik]
+[{ŋ,ŋ̩}gi-]
+[nɪkɪskɪˈnɑməxaw]
+[mʌskɪçjuneo]
+[ˈni:nə mʌskɪçjuneo]
+[mʌskɪçjuneo ˈni:nə]
+[nɪmʌskɪçjuneowɪnɪn]
+[nɪmʌskɪçjuneowɪnan]
+[kɪskɪˈnɑməxaw]
+[asajnɪmʌskɪçjuneowɪnɪn]
+[asaj]
+[mʌskɪxi]
+[ʌski]
+[kizɪk]
+[nɪˈtɪntɪn]
+[nɪmʌskɪçjuneowɪn nɪˈtɪntɪn]
+[nɪˈtɪntɪn nɪmʌskɪçjuneowɪn]
+[ta-]
+[nɪˈtɪntɪn mɒts tamʌskɪçjuneowɪn]
+[mɒts nɪˈtɪntɪn tamʌskɪçjuneowɪn]
+*[tamʌskɪçjuneowɪn nɪˈtɪntɪn mɒts]
+[mɒts tamʌskɪçjuneowɪn nɪˈtɪntɪn]
+[niːmɛ]
+[niːmɛnan]
+[nɪniːmɛn]
+[kɪˈniːmɛn]
+[niːmu]
+[ˈwi:nimu]
+[taˈniːmu]
+[to:ˈniːmɛn]
+[bɛː ˈniːmɛn]
+[ɛˈtuθteo]
+[at:ɪm nɪtˈwɛntɛn]
+[nɪtˈwɛntɛn at:ɪm]
+[nɪtˈwɛnamaw at:ɪm]
+[nɪtˈwɛnamaw nɪˈpaːpa]
+[ɪnɪˈnuɪxan]
+[ɛ ˈtuθteo atawɛːkimox]
+[ataˈwɛ]
+?[nɪtˈwɛntɛn tamʌskɪçjuneowɪnɪn]
+?[nɪtˈwɛntɛn tamʌskɪçjuneowɪtɪn]
+?[nɪtˈwɛntɛn tamʌskɪçjuneo]
+?[nɪtˈwɛnamɑːw bɹɛnɾə tamʌskɪˈçjuneo]
+?[nɪtˈwɛnamɑːwak tamʌskɪˈçjuneot͡ɕɪk]
+[tamʌskɪˈçjuneowak nɪt͡ɕɪwa:sɪmɪsak nɪtˈwɛnɪman]
+[nɪtˈwɛntɛn ˈnɪp:i:]
+[ŋ̩giwan ekoŋ̩giskuləwɪn]
+[ŋ̩giwan]
+[eko-]
+[ekoma]
+[ekoma ŋ̩gi tuθtɛn atawɛkamox]
+[paxan]
+[ŋ̩kɪkiwan ekopaxan kɪtuθtɛn skuləwix]
+[ɪˈkɪskɪnama:kwe ˈni:nʌ]
+[okɪsˈkɪnamegeːo ni:nʌ]
+[ŋ̩giˈpaxɛsɪnɪn]
+[anta mʊd͡ʒistak]
+[ˈnimɪ]
+[toˈnimɪ]
+[kanɪˈnimɪ]
+[nɪˈnimɪn]
+[ˈnimɪn]
+[kɪˈnimɪn]
+[ˈnimu]
+[kɪˈnimɪˌnan]
+[ɛˈnimiˌax]
+[kɪˈnimɪˌnaw]
+[ɛˈnimɪˌtɕik]
+[ɛˈnimiˌan]
+[ɛˈnimɪt]
+[ɛˈnimɪtɕik]
+[kipeˈwabmɪˌtɕik ɛˈnimiˌan]
+[kʌˈpe]
+[ˈʌskaw]
+[aˈwena ɛˈnimɪt]
+[aˈwena ˈkina]
+[utaɣusix]
+[ŋgiˈnimɪn]
+[kɪnimiɪn]
+[ɛɣinimɪt]
+[ɛɣiˈnimiˌan]
+[ɛɣiˈnimiˌax]
+[kiˈnimɪˌnawan]
+[ɛɣinimɪtɕik]
+[ʌwʌsˈtakosix]
+[nɪwiˈnimɪn]
+[kɪwiˈnimɪn]
+[ɛwiˈnimɪt]~[wiˈnimu]
+[ewiˈnimiˌax]
+[kɪwiˈnimɪˌnan]
+[ɛwiˈnimutɕik]~[wiˈnimutɕik]
+[ndaˈnimɪn]
+[taˈnimɪn]
+[taˈnimu]
+[ndanimɪnan]
+[tanimiax]
+[taˈnimɪˌnawak]
+[taˈnimutɕik]
+[ndoˈnimɪn]
+[kɪtoˈnimɪn]
+[ɛtoˈnimɪt]
+[ndoˈnimɪˈnan]
+[kɪtoˈnimiˌax]
+[kɪtoˈnimɪnˌawak]
+[ɛtoˈnimɪˌtɕik]
+[nɪpeˈnimɪn]
+[kɪpeˈnimɪn]
+[ɛpeˈnimɪt]
+[kɪpeˈnimiˌax]
+[epeˈnimiˌax]
+[kɪpeˈnimɪˌnawak]
+[ɛpeˈnimɪtɕik]
+[nimɪ kɪtɪtɪn]
+[kɪtɪk]
+[kɪtɪgwan]
+[tanimɪtɕik nitaw]
+?[ŋgiwiθtamatən tanimiɪn]
+[ŋgiwiθtamaw tanimɪt]
+[ŋgiwiθtamawak tanimutɕik]
+[ɛɣiwiθtamɪt ntonimɪ]
+[nɪwabɪmaɕun]
+[nɪwabɪmaw]
+[nɪwabɪmawak]
+[nɪnaxin ɛnimiʌn]
+[kɪnaxin kɪnimiɪn]
+[naxju enimiɪt]
+[naxew ɛnimɪtɕik]
+[mɪnuθtagən]
+[mɑts ŋganimɪn]
+[ɛkaːnimɪt]
+?[ɛkanimɪn]
+[aˈwasɪˌsak]
+[ɛtuθˈtew]
+[nɪpi]
+[nipi]
+[nipija]
+nɪwapɪθten nɪpi
+[ki.a.gat:s] or [ki.a.gat:s]
+[ki.a.gat.ne.kisɪθ.tanə] or [ne.kisɪθ.tanə.ki.a.gat]
+*[ne.ki.a.gat.kisɪθ.tanə]
+[ki.a.gat.ne.kisɪθ.tan]
+[də.kisɪθ.tan]
+[də]
+[ŋdə.kisɪθ.tan]
+[do]
+[se:.mak]
+[se:.mak.de.kisɪθ.tan]
+[wɑbi. ɦɛ]
+[a.,se:.ki.ə.gat]
+[kɪ.kisɪθ.tan]
+[nɪ.kisɪθ.tan]
+[də.kisɪθ.tajn]
+[wi.bʊts:.nɪ.kisɪθ.tan] or [nɪ.kisɪθ.tan.wi.bʊts:]
+*[nɪ. wi.bʊts:.kisɪθ.tan]
+[mɑtsu.wena.mats.ʒiw.atɪm{:a}]
+[pɪ.mɪt:ɪsɪn.nejo.ɦat.alɪkwə.dʒæz:a]
+[mɑtsu.wena.e.pɪ.mɪt.thɪsɪn.nejo.ɦat.atɪmwa]
+[mɑtsu.wena]
+[‘na.ʒɪ.be.,ɦət]
+[na.ʒɪ.beθ.tɔt]
+[ə.bi.ɦweso.nɪ.tɛm]
+[mɑt.bi.ɦweso.nɪ.tɛm]
+*[bi.ɦweso. mɑt.nɪ.tɛm]
+[mɑts.bi.ɦweso.nɪ.tejamak] or [mɑts.bi.ɦweso.nɪ.tem:ak]
+[atɪm.wah]
+[mɑts.bi.ɦweso.nɪ.tɛm nɪ.pus.sa.pi.kweso]
+[ej.mɛ.dʒen.ta.nɪ.tɛm]
+[mo.ɦəts]
+[mɑts.kwajask.enɪgɪmot]
+[mo.ɦəts.kwajask.enɪgɪmot]
+[mo.ɦəts.bʊm:ɪθ.tejo.nɪ.tɛm]
+[mo.ɦəts.bʊm:ɪθ.taw:.nɪ.tɛm]
+[nɪmɪnwɛnɪθtɛn]
+[nɪmɪnɛntɛn]
+[nɛ'nimɪn]
+[nɪmɪnɪntɛn]
+[owaskajgɪn]
+[o.wi.xɪk]
+[atʷenta]
+[atʷenta.ɦɪk]
+[anama]
+[anama mʌsnajgaθtɪk]
+[pɛntajmʌsnajgaθtɪk]
+[mʌsnajgaθtɪk.nɪtʷɪntɛn]
+[pɛtamʌsnajgaθtɪk]
+[peʰtæn:amamʌsnajgaθtɪk]
+[kisbɪnmʌsnajgaθtɪk]
+[pɛhminɪnmʌsnajgaθtɪk]
+[peʰ.ta]
+[o.was.gaj.gʌ.nə]
+[ɛmɪnɪn.nɛmət]
+[John ɛmɪnɪn.nɛmət Mary]
+[Mary ɛmɪnɪn.nɛmət John]
+[mɪnɛnɪmaʊ]
+[nɪmɪnɛnɪmaʊ]
+[ɛ.mɪ.nɛnɪma.tʑɪk]
+[mu.wɑt]
+[ɛ.mu.wɑtʑɪk]
+[ɛ.mu.wɑtʑɪk.sɪ.si.pa]
+[ɛʲ.mɪ.dʒɛn.na.math]
+?[ɛʲ.mɪ.dʒɛn.na.mat.ʑɪk]
+[ŋgi.wɑ.baməsun]
+[ɛ.wɑb.mæ.dʒɪk]
+[tə.tuθ.tej.n̩.nɪ.ta.ʒe.mo.ɪn.wɑ.bɪ.heɪ]
+[wɑ.bɪ.ɦeɪ]
+[nɪ.ta.ʒe.mo.ɪn]
+[tə.tuθ.tej.n̩]
+[nɪ.wi.tʑɪθ.tɔn]
+[tɛ.tu.wit.dʒej.wɛn:ə:.kis.bɪn:ə.tuθ.tej.an]
+[kis.bɪn:a.tuθ.'tej.n̩.kʷaj.askʰ dʌ.nɪmɪ.nɛn.tɛn]
+[dʌ.mɪ.,nɛn.'tɛn.kis.bɪn.nɪteθ.'tej.n̩.wɑbɪ.heɪ]
+[nɪ.pʰax.hʌh.tow.mɪnʊn]
+[nɪ.tuθ.tej.ɪn.wɔ.bɪ.ɦej]
+[nɪ.pʰax.hʌh.tow.mɪnʊn]
+[nɪ.tuθ.tej.ɪn.wɔ.bɪ.ɦej]
+[t̚a.now.wa.nɪ.tɛm]
+[ˌt̚an.ˈtej.nɪ.a.su.nim]
+[a.su.ni]
+[neʲ.a.su.nɪŋ]
+*[t̚a.now.wa.nɪ.a.su.nim]
+[t̚a.now.wa]
+[t̚an.tej]
+[ni.mɔ.aʊ.æpɪl]
+[nɪ.mɔ.an.æpɪl]
+[ə.tɪm.mɔ.aʊ.æpɪl]
+[ni.me]
+[ni.mi.mɪn]
+[ɛ.gi.ni.mi.an]
+[gɪ.ˈni.ˌmɪn]
+[de.ni.mɪn]
+[ni.meʰ]
+[ni.mɪk]
+[ni.mɪ.nɑn]
+[doʊ.ni.mɪ.nɑn]
+[doʊ]
+[da.doʊ.ni.mɪ.nɑn]
+[mɔts.mɔt.dʑɛs.koʊ.nɪ.ni.mɪn]
+[mo.ɦæts.mɔt.p̚ej.a.k̚o.gɛ.ni.mɪn]
+[mɔts.mɔts.nɪ.ni.mɪn]
+[mɔts.kisθ.tɑm.nə.ni.mɪn]
+[mɔts.mɔt.nɪ.moʷ.aʊ.a.tɪm.ək] or [mɔts.a.tɪm.ək.nɪ.moʷ.aʊ]
+[mɪs.aj.tɪm]
+[e.mɪ.sa.gʌt.a.tɪm]
+[a.pɪ.sa.sɪt.a.tɪm]
+[a.pɛ.si.soʊ.a.tɪm]
+[mɔts.a.pɛ.si.so.a.tɪm.ə] or [mɔt.nɪ.moʊ.aʊ.a.pɛ.sis:ɪθ.a.tɪmmə]
+[mɪs.taj.ɦi.nɪ.mit̚.sun]
+[bɪm.bɪθ.taʊ]
+[a.su.hi.bɪm.bɪθ.taʊ]
+[sʊ.hi.mit.sʊ]
+[soʊ.hɪt.bʌn:ɪt]
+[ʊ.dʒɪt.bʌn:ɪt]
+[soʊ.xɪ]
+[nɑn.taʊ]
+[nɪwabmɪtɪn]
+[kɪwabmɪtɪn]
+[kɪwabmɪtnawaw]
+[nɪwabmaw kɪmʌskwɛm]
+[nɪwabmɪtnawaw]
+[mʌskwʌ]
+[nɪt:ɛ:ŋgiwabmaw mʌskwʌ ɪmɪsɪg ɛɣo mus ɛmɪsɪgʌt̪ut mʌskwʌ]
+[egimɪsɪgʌt̪ut anamʌskwʌ]
+[ɛwabmɪt mʌskwʌ]
+[kiwabmɪt mʌskwʌ]
+[ɪwabmɪt mʌskwʌ]
+[nɪwabmɪθt̪ɛn]
+[nɪwabmaw]
+[nɪwabɪθt̪ɛna]
+[ɛwabmɪtnan]
+[kɪwabmɪnan]
+[kiwabmɪtna:naw]
+[ki:nʌ kɪnisut͡ʃɪk kɪwabmɪtnan]
+[mats wabmɪt mʌskwa]
+[mʌskwa mɔ:ts wabmɪt]
+[mɔ:ts kɪwabmɪt mʌskwa]
+[kɪwabɪθtejax]
+[kiwabmaw]
+[nɪwabmawaw]
+?[ɛ:wabmɪtt͡ʃik]
+?[kɪwabmɪtt͡ʃik]
+[kɪsa:giheowak]
+[sa:gihi]
+[{t,d}o:-]
+[{t,d}o:ni:mɛ]
+[t̪ani:mɪn]
+[t̪a{t,d}o:ni:mɪn]
+[ganimɪn]
+[t̪ani:mɔ]
+[ŋgʌto:ni:mɪn]
+*[nɪgani:mɪn]
+[ŋganɪpa:n]
+[nɪnɪp:a:n t̪ɪpɪskaɣe]
+[a:skaw]
+[kʌp:e]
+[ɪt̪atɪpɪska:ɣetnɪnɪp:a:n]
+[a:sainɪnɪp:a:n]
+[git̪ɪt̪ɪn]
+[nɪt̪ɪt̪aw]
+[gɪwiθtʌmaw]
+[ŋgɪmɪθt̪ɛwawak]
+[wiθt̪ɛm]
+[mʌskwa awa
+[mʌskwa sa]
+[mɔna mʌskwa]
+[t̪apwɛ kɪtɪt̪ɪn mʌskwawa]
+[maskuts mats]
+[maskuts mats]
+[mats maskuts]
+[matsutɪ]
+[t̪ɛ:pɪkɔk]
+[kɪmasnajgɛan]
+[kɪmʌsnajgan]
+[kɛɣɔn kɪmʌsnajgan]
+[kɛɣɔnst͡ʃi kɪmʌsnajgan]
+[minɪn mʌsnajgaθtɪk]
+[pɛminɪn mʌsnajgaθt͡ʃɪk]
+[pɛminaw nɪk mʌsnajgaθtɪk]
+[pɛsu nɪk tawapɪθtam mʌsnajgaθtɪk]
+[pɛsu ɛwiwabmɪθtɪm mʌsnajgaθtɪk]
+[wɪnimu]
+[ɛwinimɪt]
+[nt͡ʃɪ]
+[ust͡ʃɪ]
+[awɛna mʌsnajgɪt]
+[awɛna kɪmʌsnajxɛan]
+[kɛamiɛtnan]
+[kɪnimina:n]
+[ɛnimian]
+[ɛwinimijan]
+[ɛwinimia]
+[nɪtwɛnt̪ɛn tanimɪn]
+[nɪtwɛnt̪ɛax tanimɪn]
+[kɪtwɛntɛna tanimɪn]
+[nɪwantan nɪmɔskasɪn]
+[kɪwabɪθtɛna nɪmɔskasɪn]
+[awɛna anɛgi]
+[awɛna ki:na]
+[mat nɪkɪskɛnamawak]
+[nɪkɪskɛnamawʌk]
+[nɪskɛnʌmatʌn]
+[kɪkɪskɛnʌmatna:n]
+[nɪskɛnt̪ɛn ʌnimɪt͡ʃɪk]
+[nɪskɛnt̪ɛn mats ʌnimɪt͡ʃɪk]
+[ɛmʌsnajxɛt]
+[mʌsnajxɛɔ]
+[kʌpːɛː masnajxeo]
+[anust tamasnajxeo]
+giːθtɔm tamasnajxeo]
+[anust wimasnajxeo]</textarea>
+		</div>
+		<div class="half-col" id="output-div">
+			<textarea class="half-textbox out-txt" name="out-counts">A LIST OF ENVIRONMENTS AND ASSOCIATED COUNTS WILL APPEAR HERE</textarea>
+			<textarea class="half-textbox out-txt" name="out-tokens">A LIST OF ENVIRONMENTS AND ASSOCIATED TOKENS WILL APPEAR HERE</textarea>
+		</div>
+		<br/>
+		<input type="button" name="submit" value="Find!" />
+	</form>
+	</div>
+
+	<script src="jquery-2.1.0.js"></script>
+	<script src="finder.js"></script>
+
+	<!-- Start of StatCounter Code for Default Guide -->
+	<!--<script type="text/javascript">
+	var sc_project=11035015; 
+	var sc_invisible=1; 
+	var sc_security="e0bdc315"; 
+	var scJsHost = (("https:" == document.location.protocol) ?
+	"https://secure." : "http://www.");
+	document.write("<sc"+"ript type='text/javascript' src='" +
+	scJsHost+
+	"statcounter.com/counter/counter.js'></"+"script>");
+	</script>
+	<noscript><div class="statcounter"><a title="shopify traffic
+	stats" href="http://statcounter.com/shopify/"
+	target="_blank"><img class="statcounter"
+	src="//c.statcounter.com/11035015/0/e0bdc315/1/"
+	alt="shopify traffic stats"></a></div></noscript>-->
+	<!-- End of StatCounter Code for Default Guide -->
+</body>
+</html>

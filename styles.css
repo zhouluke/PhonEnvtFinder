@@ -1,0 +1,190 @@
+
+p, form, span, div {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+	position: relative; 
+	margin: 0; 
+	padding: 0;
+	background-color:  #ccffcc;
+}
+
+/* Website logo */ 
+h1, h2 {
+	font-family: 'Oswald', cursive;
+	margin-top:20px;
+	margin-bottom:0px;
+	color: #30cc00;
+	font-size: 3em;
+}
+
+/* DIVS */
+
+div {
+	background-color: #ecffe6;
+	position:relative;
+    overflow:auto;
+}
+
+.col { margin:20px; padding: 20px; }
+.popup { padding: 20px; }
+
+#timeline { margin-top:15px; }
+.entry { margin-bottom:15px; }
+
+.col, .entry, .popup  {
+    border-color: black;
+	border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.wide-col { margin-left:0; margin-right:0; }
+.narrow-col { text-align:center; }
+.half-col { 
+	margin:0; 
+	padding:0; 
+	width:49%;
+	overflow-x:hidden;
+}
+
+#input-div { float:left; }
+#output-div { float:right; }
+
+#wc-make-done .word-cloud {	margin-bottom:20px; }
+
+/* For wide screens */
+@media screen and (min-width: 1600px) {
+	.wide-col { width:50%; left:25%; }
+	.narrow-col { width:30%; left:35%; }
+}
+
+/* For medium screens */
+@media screen and (min-width: 1000px) and (max-width: 1600px)  {
+	.wide-col { width:70%; left:15%;  }
+	.narrow-col { width:30%; left:35%; }
+}
+
+/* For narrow screens */
+@media screen and (min-width: 560px) and (max-width: 1000px)  {
+	.wide-col { width:90%; left:2%;  }
+	.narrow-col { width:36%; left:32%; }
+}
+
+/* For extra narrow screens */
+@media screen and (max-width: 560px) {
+	.wide-col { width:98%; padding:0; }
+	.narrow-col { width:36%; left:32%; }
+	.top-line { font-size:0.5em; }
+	.word-cloud { font-size: 10px; }
+}
+
+.my-name { font-weight: bold; } 	/* Username display */
+
+.error { color: red; }
+div.error {
+	width:70%;
+	left:15%;
+	margin-bottom:20px;
+}
+
+a { 
+	color:blue; 
+	text-decoration:underline; 
+	cursor: pointer;
+}
+
+
+/* TIMELINE ENTRIES */
+
+.top-line {
+	height:50px;
+	background-color: #52E2FF;
+	overflow: hidden;
+	margin: 0px;
+}
+
+.top-line div { 
+	background-color: #52E2FF; 
+	position: absolute;
+	top: 25%;
+	overflow:hidden;
+}
+
+.avatar { height:50px; width:50px; }
+
+.user-info {
+	width:20%;
+	left: 60px;
+	text-align:left;
+	font-weight: bold;
+	background-color: #CCFFFF;
+	overflow:hidden;
+}
+
+.meta-info {
+	width:60%;
+	right: 10px;
+	float: right;
+	text-align:right;
+	background-color: #CCFFFF;
+	overflow:hidden;
+}
+
+.meta-info form { display: inline; }
+
+
+/* POPUP BOXES 
+ * Approach adapted and extended from the advice at: 
+ * http://stackoverflow.com/questions/19064987
+*/
+#dark-overlay {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index:100;
+
+    margin: 0px;
+    background-color: black;
+    opacity:.80;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    display:none;
+
+	/* Accomodate the close "x" symbol */
+    color:grey;
+    text-align:right;
+    font-size:1.5em;
+    cursor: default;
+}
+#dark-overlay div { 	/* "Close" text */
+	background-color: black; 
+	float:right;
+	margin:2%;
+}
+
+.popup {
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    border: 4px solid #52E2FF;
+    background-color: white;
+    z-index:110;
+    overflow: auto;
+    text-align:center;
+    display:none;
+}
+
+
+
+
+textarea {
+	width: 100%;
+	height: 600px;
+}
+
+.half-textbox { height:300px; }
